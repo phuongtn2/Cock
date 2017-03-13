@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Cock</title>
+
+    <link href="../css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../css/style1.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../css/style2.css" rel="stylesheet" type="text/css" media="all"/>
+    <link rel="icon" href="../images/favicon.png" type="image/x-icon"/>
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <link href="../css/e9.css" rel="stylesheet" type="text/css" media="all"/>
+    <![endif]-->
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/custom.js"></script>
+</head>
+
+<body class="cms-index-index cms-home">
+<!--Begin Page-->
+<div class="page">
+    <!--Begin Header Wrapper-->
+    <div class="header-wrapper clearfix">
+        <!--Begin Header Top-->
+        <div class="header-top-bg">
+            <ul class="account-cart-wrapper-top">
+                <li class="skip-link-hover skip-search">
+                    <div id="header-search-hover">
+                        <form id="search_mini_form" action="#" method="get">
+                            <div class="input-box">
+                                <label for="search">Search:</label>
+                                <input onkeyup="has_value()" placeholder="Search" id="search" type="search" name="q"
+                                       value="" class="input-text required-entry" maxlength="128"/>
+                                <button type="submit" title="Search" class="button search-button"><span>Search</span>
+                                </button>
+                            </div>
+                        </form>
+                        <div id="search_autocomplete" class="search-autocomplete"></div>
+                    </div>
+                </li>
+                <li class="skip-link-hover">
+                    <div id="header-country-hover">
+                        <a title="Vietnam" class="country-switcher" href="#">
+                            <span class="flag flag-vn"></span>Vietnam</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--End Header Top-->
+
+        <!--Begin Wrap-->
+        <div class="dt-wrap-stick">
+            <header id="header" class="page-header">
+                <div class="page-header-container">
+                    <a class="logo" href="#" title="Pedro">
+                        <img src="../images/logo/logo.jpg" alt="Pedro" class="large"/>
+                    </a>
+                    <div class="store-language-container"></div>
+                </div>
+            </header>
+
+            <div class="skip-links no-shopping">
+                <a href="#header-nav" class="skip-link skip-nav" title="Menu">
+                    <span class="icon"></span>
+                </a>
+                <a href="#header-search" class="skip-link skip-search skip-search-mb" title="Search">
+                    <span class="icon"></span>
+                </a>
+            </div>
+            <!--Begin Navigation -->
+            <div id="header-nav" class="skip-content">
+
+                <nav id="nav">
+                    <ol class="nav-primary">
+                        <li class="level0 nav-5 last parent has-lv2">
+                            <a href="/" class="level0 has-children" data-title="HOME">HOME</a>
+                        </li>
+
+                        <li class="level0 nav-5 last parent has-lv2">
+                            <a href="javascript:void(0);" class="level0 has-children" data-title="MEN">MEN</a>
+                            <div class="menu-wrapper c2">
+                                <ul class="level0">
+                                    <li class="level1 nav-5-1 first parent">
+                                        <a href="javascript:void(0);" class="level1 has-children"
+                                           data-title="Editorial">Products</a>
+                                        <div class="menu-wrapper c4">
+                                            <ul class="level1">
+                                                <li class="level2 nav-5-1-1 first"><a href="/products/men-wallet" class="level2 "
+                                                                                      data-title="STYLE ALERT">WALLET
+                                                </a></li>
+                                                <li class="level2 nav-5-1-2"><a href="/products/men-bag" class="level2 "
+                                                                                data-title="WHAT'S TRENDING THIS FALL VIDEO II">CARRIER
+                                                    BAG</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="level0 nav-5 last parent has-lv2">
+                            <a href="javascript:void(0);" class="level0 has-children" data-title="WOMEN">WOMEN</a>
+                            <div class="menu-wrapper c2">
+                                <ul class="level0">
+                                    <li class="level1 nav-5-1 first parent">
+                                        <a href="javascript:void(0);" class="level1 has-children"
+                                           data-title="Editorial">Products</a>
+                                        <div class="menu-wrapper c4">
+                                            <ul class="level1">
+                                                <li class="level2 nav-5-1-1 first"><a href="/products/women-wallet"
+                                                                                      class="level2 "
+                                                                                      data-title="STYLE ALERT">WALLET</a>
+                                                </li>
+                                                <li class="level2 nav-5-1-2"><a href="/products/women-bag" class="level2 "
+                                                                                data-title="WHAT'S TRENDING THIS FALL VIDEO II">CARRIER
+                                                    BAG</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+                <script type="text/javascript">
+                    $j(document).ready(function () {
+                        var active_el = $j('.cms-index-index #nav li');
+                        $j(active_el).each(function () {
+                            if ($j(this).hasClass('active')) {
+                                $j(this).removeClass('active');
+                            }
+                        });
+                    });
+                </script>
+            </div>
+
+            <!--End Navigation -->
+        </div>
+        <!--End Wrap-->
+    </div>
+    <!--End Header Wrapper-->
+
+    <div class="main-container col1-layout">
+        <div class="col-main">
+
+            <div class="page-title category-title"></div>
+
+            <div class="category-description std">
+                <div class="visible-md">
+                    <div class="newrow">
+                        <a class="promotions" href="#"><img alt="" src="../images/footer/md-category.jpg"/></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-products aw-ajaxcatalog-container">
+                <ul class="products-grid products-grid--max-4-col product-view-5 first last odd">
+                    <li class="item last" th:each="product : ${products}">
+                        <a th:href="${ '/product/' + product.productId}" title="peep-toe criss cross sandals" class="product-image">
+                            <img id="product-collection-image-31036" th:src="${product.image}"
+                                 alt="peep-toe criss cross sandals"/>
+                            <div class="product-info product-info-view5">
+                                <div class="info-view">
+                                    <h2 class="product-name"><span th:text="${product.productName}"></span></h2>
+                                    <div class="price-box">
+                  <span class="regular-price" id="product-price-31036">
+                      <span class="price">S$ <span th:text="${product.price}"></span> </span>
+                  </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--.col-main--></div>
+    </div>
+    <div class="footer-container">
+        <div class="footer">
+            <div class="bottom-container">
+                <div class="links">
+                    <div class="block-title"><span>Company</span></div>
+                    <ul class="block-content">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Social Responsibility</a></li>
+                    </ul>
+                </div>
+                <div class="links">
+                    <div class="block-title"><span>FOLLOW US</span></div>
+                    <div class="visible-mobile">
+                        <ul class="block-content">
+                            <li><a href="#" target="_blank">Facebook</a></li>
+                            <li><a href="#" target="_blank">Instagram</a></li>
+                            <li><a href="#" target="_blank">Twitter</a></li>
+                            <li><a href="#" target="_blank">Youtube</a></li>
+                            <li><a href="#" target="_blank">Vimeo</a></li>
+                            <li><a href="#" target="_blank">Pinterest</a></li>
+                            <li><a href="#" target="_blank">Snapchat</a></li>
+                            <li><a href="#" target="_blank">Tumblr</a></li>
+                        </ul>
+                    </div>
+                    <div class="visible-desktop">
+                        <ul class="block-content">
+                            <li>
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <td style="padding: 5px 0px 5px 0px;"><a href="#" target="_blank"><img
+                                                alt="" src="../images/footer/footer-icons_facebook.png"
+                                                height="20" width="20"/></a></td>
+                                        <td style="padding: 5px 0px 5px 30px;"><a href="#" target="_blank"><img
+                                                alt="" src="../images/footer/footer-icons_instagram-new.png"
+                                                height="20" width="20"/></a></td>
+                                        <td style="padding: 5px 0px 5px 30px;"><a href="#" target="_blank"><img
+                                                alt="" src="../images/footer/footer-icons_twitter.png"
+                                                height="20" width="20"/></a></td>
+                                        <td style="padding: 5px 0px 5px 30px;"><a href="#" target="_blank"><img
+                                                alt="" src="../images/footer/footer-icons_youtube.png"
+                                                height="20" width="20"/></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 5px 0px 5px 0px;"><a href="#" target="_blank"><img
+                                                alt="" src="../images/footer/footer-icons_vimeo.png"
+                                                height="20" width="20"/></a></td>
+                                        <td style="padding: 5px 0px 5px 30px;"><a href="#" target="_blank"><img
+                                                alt="" src="../images/footer/footer-icons_pinterest.png"
+                                                height="20" width="20"/></a></td>
+                                        <td style="padding: 5px 0px 5px 30px;"><a href="#" target="_blank"><img
+                                                alt="" src="../images/footer/footer-icons_snapchat.png"
+                                                height="20" width="20"/></a></td>
+                                        <td style="padding: 5px 0px 5px 30px;"><a href="#" target="_blank"><img
+                                                alt="" src="../images/footer/footer-icons_tumblr.png"
+                                                height="20" width="20"/></a></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="block block-subscribe">
+                <form action="#" method="post" id="newsletter-validate-detail">
+                    <div class="block-content">
+                        <div class="form-subscribe-header">
+                            <label for="newsletter">Be in touch</label>
+                        </div>
+                        <div class="content-subscribe">
+                            <div class="input-box">
+                                <input name="sub_gender" id="sub-gender" value="" type="hidden"/>
+                                <input placeholder="Email Address" type="text" autocapitalize="off"
+                                       autocorrect="off" spellcheck="false" name="email" id="newsletter"
+                                       title="Sign up for our newsletter"
+                                       class="input-text required-entry validate-email"/>
+                            </div>
+                            <div class="actions">
+                                <button type="submit" title="Men" value="1" class="button">
+                                    <span><span>Men</span></span></button>
+                                <button type="submit" title="Women" value="2" class="button">
+                                    <span><span>Women</span></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <script type="text/javascript">
+                    //<![CDATA[
+                    var newsletterSubscriberFormDetail = new VarienForm('newsletter-validate-detail');
+                    $j(document).ready(function () {
+                        $j('#newsletter-validate-detail .button').click(function (e) {
+                            e.preventDefault();
+                            if (newsletterSubscriberFormDetail.validator.validate()) {
+                                $j('#sub-gender').val($j(this).val());
+                                $j('#newsletter-validate-detail').submit();
+                            }
+                        });
+                    });
+                    //]]>
+                </script>
+            </div>
+            <div id="footer-country">
+                <div class="country-wrapper">
+                    <a title="Singapore" class="country-switcher" href="#">
+                        <span class="flag flag-vn"></span>vietnam</a>
+                </div>
+            </div>
+            <address class="copyright">cock.com.vn - © 2017 Cock Colection</address>
+        </div>
+        <div>
+        </div>
+        <!-- .footer-container--></div>
+</div>
+
+
+<!--End Page-->
+
+<script type="text/javascript">
+    //<![CDATA[
+    var searchForm = new Varien.searchForm('search_mini_form', 'search', '');
+    //searchForm.initAutocomplete('', 'search_autocomplete');
+    //]]>
+    function has_value() {
+        var o_search = $j('#search_mini_form #search');
+        var s_v = o_search.val();
+        if (s_v != '') {
+            o_search.addClass('has-value');
+        } else {
+            o_search.removeClass('has-value');
+        }
+    }
+    $j(document).ready(function () {
+        has_value();
+        $j('.search-button').on('click', function () {
+            $j('.skip-link-hover').removeClass('active');
+            $j('.skip-link-hover').removeClass('menu-active');
+        });
+    });
+</script>
+</body>
+</html>
