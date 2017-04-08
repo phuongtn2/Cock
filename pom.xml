@@ -6,7 +6,7 @@
 	<groupId>cock.com</groupId>
 	<artifactId>cock</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<!--<packaging>war</packaging>-->
 
 	<name>Cock Web Application</name>
 	<description>Cock Web Application</description>
