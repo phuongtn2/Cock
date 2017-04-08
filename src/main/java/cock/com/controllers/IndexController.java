@@ -171,17 +171,17 @@ public class IndexController {
                 String path = resource.getURI().getPath();
                 String pathType = "";
                 if(type == 1)
-                    pathType = "mem_wallet/";
+                    pathType = "men_wallet/";
                 if(type == 2)
                     pathType = "womem_wallet/";
                 if(type == 3)
                     pathType = "passpost/";
                 if(type == 4)
-                    pathType = "mem_bag/";
+                    pathType = "men_bag/";
                 if(type == 5)
                     pathType = "women_bag/";
                 if(type == 6)
-                    pathType = "mem_belt/";
+                    pathType = "men_belt/";
                 if(type == 7)
                     pathType = "women_belt/";
                 OutputStream outputStream = new FileOutputStream(path.replaceAll("path.jpg", "") + pathType + fileName);
