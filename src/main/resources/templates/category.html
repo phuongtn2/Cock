@@ -138,10 +138,10 @@
                         <div class="product-image-wrapper">
                             <div class="single-products">
                                 <div class="productinfo text-center">
-                                    <img th:src="${product.image}" alt="" />
+                                    <a th:href="${ '/product/' + product.productId}" target="_blank"><img th:src="${product.image}" alt="" /></a>
                                     <h2><span th:text="${product.price}"></span> vnđ</h2>
                                     <p><span th:text="${product.productName}"></span></p>
-                                    <a th:href="${ '/product/' + product.productId}" class="btn btn-default add-to-cart"><i class="fa fa-link"></i>View detail</a>
+                                    <a th:href="${ '/product/' + product.productId}" class="btn btn-default add-to-cart" target="_blank"><i class="fa fa-link"></i>View detail</a>
                                 </div>
                             </div>
                         </div>
