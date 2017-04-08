@@ -15,32 +15,55 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Iterable<Product> listAllProductsByType(int productType) {
-        return productRepository.findByProductTypeId(productType);
-    }
-    @Override
-    public Iterable<Product> listBarnerProducts() {
-        return productRepository.findByTypeOrderByCreatedDesc((byte) 1);
+    public Iterable<Product> listAllProductsByType(byte type) {
+        return productRepository.findByTypeAndStatus(type, (byte) 1);
     }
 
     @Override
-    public Iterable<Product> listWalletProducts() {
-        return productRepository.findByTypeOrderByCreatedDesc((byte) 2);
+    public Iterable<Product> listMenWalletProducts() {
+        return productRepository.findTop3ByTypeAndStatusOrderByProductIdAsc((byte) 1, (byte)1);
+    }
+    @Override
+    public Iterable<Product> listWomenWalletProducts() {
+        return productRepository.findTop3ByTypeAndStatusOrderByProductIdAsc((byte) 2, (byte)1);
     }
 
     @Override
-    public Iterable<Product> listBagProducts() {
-        return productRepository.findByTypeOrderByCreatedDesc((byte) 3);
+    public Iterable<Product> listPasspostWalletProducts() {
+        return productRepository.findTop3ByTypeAndStatusOrderByProductIdAsc((byte) 3, (byte)1);
     }
 
     @Override
-    public Iterable<Product> listBeltProducts() {
-        return productRepository.findByTypeOrderByCreatedDesc((byte) 4);
+    public Iterable<Product> listMenBagProducts() {
+        return productRepository.findTop3ByTypeAndStatusOrderByProductIdAsc((byte) 4, (byte)1);
+    }
+    @Override
+    public Iterable<Product> listWomenBagProducts() {
+        return productRepository.findTop3ByTypeAndStatusOrderByProductIdAsc((byte) 5, (byte)1);
+    }
+
+    @Override
+    public Iterable<Product> listMenBeltProducts() {
+        return productRepository.findTop3ByTypeAndStatusOrderByProductIdAsc((byte) 6, (byte)1);
+    }
+    @Override
+    public Iterable<Product> listWomenBeltProducts() {
+        return productRepository.findTop3ByTypeAndStatusOrderByProductIdAsc((byte) 7, (byte)1);
+    }
+
+    @Override
+    public void saveProduct(Product product) {
+        productRepository.save(product);
     }
 
     @Override
     public Product getProductById(Long id) {
         return productRepository.findOne(id);
+    }
+
+    @Override
+    public Iterable<Product> listAllProduct() {
+        return productRepository.findAll();
     }
 
 }

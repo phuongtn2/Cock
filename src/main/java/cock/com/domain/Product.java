@@ -2,59 +2,20 @@ package cock.com.domain;
 
 import javax.persistence.*;
 import java.util.Date;
-@Entity(name = "t_product")
+@Entity(name = "product")
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long productId;
     private String productCode;
     private String productName;
-    private int productTypeId;
     private String memo;
-    private byte deleteFlag;
-    private String wholesalePrice;
-    private String agentsPrice;
     private String price;
     private String sized;
     private String color;
     private String image;
-    private int inventory;
     private byte status;
-    private long createId;
-    private Date created;
-    private byte type;
-
-    public int getProductTypeId() {
-        return productTypeId;
-    }
-
-    public void setProductTypeId(int productTypeId) {
-        this.productTypeId = productTypeId;
-    }
-
-    public long getCreateId() {
-        return createId;
-    }
-
-    public void setCreateId(long createId) {
-        this.createId = createId;
-    }
-
-    public Date getCreated() {
-        return created;
-    }
-
-    public void setCreated(Date created) {
-        this.created = created;
-    }
-
-    public byte getStatus() {
-        return status;
-    }
-
-    public void setStatus(byte status) {
-        this.status = status;
-    }
+    private byte type = 1;
 
     public long getProductId() {
         return productId;
@@ -86,30 +47,6 @@ public class Product {
 
     public void setMemo(String memo) {
         this.memo = memo;
-    }
-
-    public byte getDeleteFlag() {
-        return deleteFlag;
-    }
-
-    public void setDeleteFlag(byte deleteFlag) {
-        this.deleteFlag = deleteFlag;
-    }
-
-    public String getWholesalePrice() {
-        return wholesalePrice;
-    }
-
-    public void setWholesalePrice(String wholesalePrice) {
-        this.wholesalePrice = wholesalePrice;
-    }
-
-    public String getAgentsPrice() {
-        return agentsPrice;
-    }
-
-    public void setAgentsPrice(String agentsPrice) {
-        this.agentsPrice = agentsPrice;
     }
 
     public String getPrice() {
@@ -144,12 +81,12 @@ public class Product {
         this.image = image;
     }
 
-    public int getInventory() {
-        return inventory;
+    public byte getStatus() {
+        return status;
     }
 
-    public void setInventory(int inventory) {
-        this.inventory = inventory;
+    public void setStatus(byte status) {
+        this.status = status;
     }
 
     public byte getType() {

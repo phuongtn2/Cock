@@ -11,6 +11,7 @@ public class Barner {
 
     private String image;
     private byte status;
+    private Integer active = 0;
 
     public Integer getId() {
         return id;
@@ -34,5 +35,13 @@ public class Barner {
 
     public void setStatus(byte status) {
         this.status = status;
+    }
+
+    public Integer getActive() {
+        return active;
+    }
+
+    public void setActive(Integer active) {
+        this.active = active;
     }
 }

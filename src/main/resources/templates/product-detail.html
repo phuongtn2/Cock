@@ -1,376 +1,244 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head lang="en">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Cock</title>
-
-    <link href="../css/style.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="../css/style1.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="../css/style2.css" rel="stylesheet" type="text/css" media="all"/>
-    <link rel="icon" href="../images/favicon.png" type="image/x-icon"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>Home | Cock</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="../css/prettyPhoto.css" rel="stylesheet"/>
+    <link href="../css/price-range.css" rel="stylesheet"/>
+    <link href="../css/animate.css" rel="stylesheet"/>
+    <link href="../css/main.css" rel="stylesheet"/>
+    <link href="../css/responsive.css" rel="stylesheet"/>
     <!--[if lt IE 9]>
-    <script src="../js/html5.js"></script>
-    <link href="../css/e9.css" rel="stylesheet" type="text/css" media="all"/>
+    <script src="../js/html5shiv.js"></script>
+    <script src="../js/respond.min.js"></script>
     <![endif]-->
-    <script src="../js/jquery.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/script.js"></script>
-    <script src="../js/custom.js"></script>
-</head>
+    <link rel="shortcut icon" href="../images/ico/favicon.png"/>
+</head><!--/head-->
 
-<body class="cms-index-index cms-home">
-<!--Begin Page-->
-<div class="page">
-    <!--Begin Header Wrapper-->
-    <div class="header-wrapper clearfix">
-        <!--Begin Header Top-->
-        <div class="header-top-bg">
-            <ul class="account-cart-wrapper-top">
-                <li class="skip-link-hover skip-search">
-                    <div id="header-search-hover">
-                        <form id="search_mini_form" action="#" method="get">
-                            <div class="input-box">
-                                <label for="search">Search:</label>
-                                <input onkeyup="has_value()" placeholder="Search" id="search" type="search" name="q"
-                                       value="" class="input-text required-entry" maxlength="128"/>
-                                <button type="submit" title="Search" class="button search-button"><span>Search</span>
-                                </button>
+<body>
+<header id="header"><!--header-->
+    <div class="header_top"><!--header_top-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="contactinfo">
+                        <ul class="nav nav-pills">
+                            <li><a href="#"><i class="fa fa-phone"></i> +84(976-408-409)</a></li>
+                            <li><a href="#"><i class="fa fa-envelope"></i> chuchuot12a15tnp@gmail.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="social-icons pull-right">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/header_top-->
+
+    <div class="header-middle"><!--header-middle-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="logo pull-left">
+                        <a href="/"><img src="../images/home/logo.jpg" alt="" style="width: 100px; height: 100px"/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/header-middle-->
+</header><!--/header-->
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="left-sidebar">
+                    <h2>Category</h2>
+                    <div class="panel-group category-products" id="accordian"><!--category-productsr-->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a href="/">Home</a></h4>
                             </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a href="/products/men-wallet">Men Wallet</a></h4>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a href="/products/women-wallet">Women Wallet</a></h4>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a href="/products/passport-wallet">Passport Wallet</a></h4>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a href="/products/men-bag">Men Bag</a></h4>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a href="/products/women-bag">Women Bag</a></h4>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a href="/products/men-belt">Men Belt</a></h4>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a href="/products/women-belt">Women Belt</a></h4>
+                            </div>
+                        </div>
+                    </div><!--/category-products-->
+
+                </div>
+            </div>
+
+            <div class="col-sm-9 padding-right">
+                <div class="product-details"><!--product-details-->
+                    <div class="col-sm-5">
+                        <div class="view-product">
+                            <img th:src="${product.image}" alt="" />
+                        </div>
+                        <div id="similar-product" class="carousel slide" data-ride="carousel">
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                <div class="item active" th:if="${not #lists.isEmpty(relationsActive)}">
+                                    <img th:each="relation : ${relationsActive}" th:src="${relation.image}" alt="" style="width: 85px;height: 84px;"/>
+                                </div>
+                                <div class="item" th:if="${not #lists.isEmpty(relations1)}">
+                                    <img th:each="relation : ${relations1}" th:src="${relation.image}" alt="" style="width: 85px;height: 84px;"/>
+                                </div>
+                                <div class="item" th:if="${not #lists.isEmpty(relations2)}">
+                                    <img th:each="relation : ${relations2}" th:src="${relation.image}" alt="" style="width: 85px;height: 84px;"/>
+                                </div>
+                            </div>
+
+                            <!-- Controls -->
+                            <a class="left item-control" href="#similar-product" data-slide="prev">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a class="right item-control" href="#similar-product" data-slide="next">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="product-information"><!--/product-information-->
+                            <img src="../images/product-details/new.jpg" class="newarrival" alt="" />
+                            <h2 th:text="${product.productName}"></h2>
+                            <p>ID: <span th:text="${product.ProductCode}"></span></p>
+                            <img src="../images/product-details/rating.png" alt="" />
+                            <p><b>Price:</b> <span th:text="${product.price}"></span> <span>vnđ</span></p>
+                            <p><b>Color:</b> <span th:text="${product.color}"></span></p>
+                            <p><b>Brand:</b> S-COCK</p>
+                            <a href=""><img src="../images/product-details/share.png" class="share img-responsive"  alt="" /></a>
+                        </div><!--/product-information-->
+                    </div>
+                </div><!--/product-details-->
+
+                <div class="category-tab shop-details-tab"><!--category-tab-->
+                    <div class="col-sm-12">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#detail" data-toggle="tab">Detail</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+
+                        <div class="tab-pane fade active in" id="detail" >
+                            <div class="col-sm-12">
+                                <p><span th:text="${product.memo}"></span>.</p>
+                                <b>Rating: </b> <img src="../images/product-details/rating.png" alt="" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div><!--/category-tab-->
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer id="footer"><!--Footer-->
+
+    <div class="footer-widget">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="single-widget">
+                        <h2>Contact Us</h2>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="single-widget">
+                        <h2>About Cock</h2>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="single-widget">
+                        <h2>Policies</h2>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="single-widget">
+                        <h2>Service</h2>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-sm-offset-1">
+                    <div class="single-widget">
+                        <h2>About Cock</h2>
+                        <form action="#" class="searchform">
+                            <input type="text" placeholder="Your email address" />
+                            <button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+                            <p>Get the most recent updates from <br />our site and be updated your self...</p>
                         </form>
-                        <div id="search_autocomplete" class="search-autocomplete"></div>
-                    </div>
-                </li>
-                <li class="skip-link-hover">
-                    <div id="header-country-hover">
-                        <a title="Vietnam" class="country-switcher" href="#">
-                            <span class="flag flag-vn"></span>Vietnam</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <!--End Header Top-->
-
-        <!--Begin Wrap-->
-        <div class="dt-wrap-stick">
-            <header id="header" class="page-header">
-                <div class="page-header-container">
-                    <a class="logo" href="#" title="Pedro">
-                        <img src="../images/logo/logo.jpg" alt="Pedro" class="large"/>
-                    </a>
-                    <div class="store-language-container"></div>
-                </div>
-            </header>
-
-            <div class="skip-links no-shopping">
-                <a href="#header-nav" class="skip-link skip-nav" title="Menu">
-                    <span class="icon"></span>
-                </a>
-                <a href="#header-search" class="skip-link skip-search skip-search-mb" title="Search">
-                    <span class="icon"></span>
-                </a>
-            </div>
-            <!--Begin Navigation -->
-            <div id="header-nav" class="skip-content">
-
-                <nav id="nav">
-                    <ol class="nav-primary">
-                        <li class="level0 nav-5 last parent has-lv2">
-                            <a href="/" class="level0 has-children" data-title="HOME">HOME</a>
-                        </li>
-
-                        <li class="level0 nav-5 last parent has-lv2">
-                            <a href="javascript:void(0);" class="level0 has-children" data-title="MEN">MEN</a>
-                            <div class="menu-wrapper c2">
-                                <ul class="level0">
-                                    <li class="level1 nav-5-1 first parent">
-                                        <a href="javascript:void(0);" class="level1 has-children"
-                                           data-title="Editorial">Products</a>
-                                        <div class="menu-wrapper c4">
-                                            <ul class="level1">
-                                                <li class="level2 nav-5-1-1 first"><a href="/products/men-wallet" class="level2 "
-                                                                                      data-title="STYLE ALERT">WALLET
-                                                </a></li>
-                                                <li class="level2 nav-5-1-2"><a href="/products/men-bag" class="level2 "
-                                                                                data-title="WHAT'S TRENDING THIS FALL VIDEO II">CARRIER
-                                                    BAG</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="level0 nav-5 last parent has-lv2">
-                            <a href="javascript:void(0);" class="level0 has-children" data-title="WOMEN">WOMEN</a>
-                            <div class="menu-wrapper c2">
-                                <ul class="level0">
-                                    <li class="level1 nav-5-1 first parent">
-                                        <a href="javascript:void(0);" class="level1 has-children"
-                                           data-title="Editorial">Products</a>
-                                        <div class="menu-wrapper c4">
-                                            <ul class="level1">
-                                                <li class="level2 nav-5-1-1 first"><a href="/products/women-wallet"
-                                                                                      class="level2 "
-                                                                                      data-title="STYLE ALERT">WALLET</a>
-                                                </li>
-                                                <li class="level2 nav-5-1-2"><a href="/products/women-bag" class="level2 "
-                                                                                data-title="WHAT'S TRENDING THIS FALL VIDEO II">CARRIER
-                                                    BAG</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ol>
-                </nav>
-                <script type="text/javascript">
-                    $j(document).ready(function () {
-                        var active_el = $j('.cms-index-index #nav li');
-                        $j(active_el).each(function () {
-                            if ($j(this).hasClass('active')) {
-                                $j(this).removeClass('active');
-                            }
-                        });
-                    });
-                </script>
-            </div>
-
-            <!--End Navigation -->
-        </div>
-        <!--End Wrap-->
-    </div>
-    <!--End Header Wrapper-->
-
-    <div class="main-container col1-layout">
-        <div class="main">
-
-            <div class="col-main">
-                <div class="product-view">
-                    <div class="product-essential">
-                        <div class="product-img-box">
-                            <div class="more-views">
-                                <ul class="product-image-thumbs">
-                                    <li class="item">
-                                        <a class="thumb-link-a" href="#">
-                                            <img th:src="${product.image}" alt=""/>
-                                            <span class="a-zoom">Zoom&nbsp;+</span>
-                                        </a>
-                                    </li>
-                                    <li class="item">
-                                        <a class="thumb-link-a" href="#">
-                                            <img th:src="${product.image}" alt=""/>
-                                            <span class="a-zoom">Zoom&nbsp;+</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="product-shop" style=" margin-top: 100px;">
-                            <div class=" product-name">
-                                <span class="h1" th:text="${product.productName}"></span>
-                            </div>
-                            <p class="artno" th:text="${product.productCode}"></p>
-                            <div class="short-description more-less">
-                                <div class="more-block">
-                                    <div class="std">
-                                        <span th:text="${product.memo}"></span>
-                                    </div>
-                                </div>
-                                <div class="price-info">
-                                    <div class="price-box">
-                                        <p class="old-price">
-                                            <span class="price-label">Regular Price:</span>
-                                            <span class="price" id="old-price-31303">S$ <span
-                                                    th:text="${product.price}"></span></span>
-                                        </p>
-                                        <p class="special-price">
-                                            <span class="price-label">Special Price</span>
-                                            <span class="price" id="product-price-31303">S$ <span
-                                                    th:text="${product.price}"></span></span>
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="additional" style="display: block;">
-                                    <table class="data-table" id="product-attribute-specs-table">
-                                        <colgroup>
-                                            <col width="50%">
-                                            </col>
-                                        </colgroup>
-                                        <tbody>
-                                        <tr class="first last odd">
-                                            <th class="label">Size:</th>
-                                            <td class="data last"><span th:text="${product.sized}"></span></td>
-                                        </tr>
-                                        <tr class="first last odd">
-                                            <th class="label">Color:</th>
-                                            <td class="data last"><span th:text="${product.color}"></span></td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                    <script type="text/javascript">decorateTable('product-attribute-specs-table')</script>
-                                </div>
-                                <a class="a-more active less-detail" href="javascript:void(0)">Less details</a>
-                                <script>
-                                    $j(document).ready(function () {
-                                        // Hide more details if additional empty
-                                        if (!$j('#product-attribute-specs-table tbody tr').length) {
-                                            $j('.short-description .a-more').addClass('no-display');
-                                        }
-                                    });
-                                </script>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
-                <!--.col-main--></div>
-
-            <!--.main--></div>
+            </div>
+        </div>
     </div>
 
-
-    <div class="footer-container">
-        <div class="footer">
-            <div class="bottom-container">
-                <div class="links">
-                    <div class="block-title"><span>Company</span></div>
-                    <ul class="block-content">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Social Responsibility</a></li>
-                    </ul>
-                </div>
-                <div class="links">
-                    <div class="block-title"><span>FOLLOW US</span></div>
-                    <div class="visible-mobile">
-                        <ul class="block-content">
-                            <li><a href="#" target="_blank">Facebook</a></li>
-                            <li><a href="#" target="_blank">Instagram</a></li>
-                            <li><a href="#" target="_blank">Twitter</a></li>
-                            <li><a href="#" target="_blank">Youtube</a></li>
-                            <li><a href="#" target="_blank">Vimeo</a></li>
-                            <li><a href="#" target="_blank">Pinterest</a></li>
-                            <li><a href="#" target="_blank">Snapchat</a></li>
-                            <li><a href="#" target="_blank">Tumblr</a></li>
-                        </ul>
-                    </div>
-                    <div class="visible-desktop">
-                        <ul class="block-content">
-                            <li>
-                                <table>
-                                    <tbody>
-                                    <tr>
-                                        <td style="padding: 5px 0px 5px 0px;"><a href="#" target="_blank"><img
-                                                alt="" src="../images/footer/footer-icons_facebook.png"
-                                                height="20" width="20"/></a></td>
-                                        <td style="padding: 5px 0px 5px 30px;"><a href="#" target="_blank"><img
-                                                alt="" src="../images/footer/footer-icons_instagram-new.png"
-                                                height="20" width="20"/></a></td>
-                                        <td style="padding: 5px 0px 5px 30px;"><a href="#" target="_blank"><img
-                                                alt="" src="../images/footer/footer-icons_twitter.png"
-                                                height="20" width="20"/></a></td>
-                                        <td style="padding: 5px 0px 5px 30px;"><a href="#" target="_blank"><img
-                                                alt="" src="../images/footer/footer-icons_youtube.png"
-                                                height="20" width="20"/></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding: 5px 0px 5px 0px;"><a href="#" target="_blank"><img
-                                                alt="" src="../images/footer/footer-icons_vimeo.png"
-                                                height="20" width="20"/></a></td>
-                                        <td style="padding: 5px 0px 5px 30px;"><a href="#" target="_blank"><img
-                                                alt="" src="../images/footer/footer-icons_pinterest.png"
-                                                height="20" width="20"/></a></td>
-                                        <td style="padding: 5px 0px 5px 30px;"><a href="#" target="_blank"><img
-                                                alt="" src="../images/footer/footer-icons_snapchat.png"
-                                                height="20" width="20"/></a></td>
-                                        <td style="padding: 5px 0px 5px 30px;"><a href="#" target="_blank"><img
-                                                alt="" src="../images/footer/footer-icons_tumblr.png"
-                                                height="20" width="20"/></a></td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <p class="pull-left">Copyright © 2017 Cock. All rights reserved.</p>
+                <p class="pull-right">Designed by <span><a href="/">Cock</a></span></p>
             </div>
-            <div class="block block-subscribe">
-                <form action="#" method="post" id="newsletter-validate-detail">
-                    <div class="block-content">
-                        <div class="form-subscribe-header">
-                            <label for="newsletter">Be in touch</label>
-                        </div>
-                        <div class="content-subscribe">
-                            <div class="input-box">
-                                <input name="sub_gender" id="sub-gender" value="" type="hidden"/>
-                                <input placeholder="Email Address" type="text" autocapitalize="off"
-                                       autocorrect="off" spellcheck="false" name="email" id="newsletter"
-                                       title="Sign up for our newsletter"
-                                       class="input-text required-entry validate-email"/>
-                            </div>
-                            <div class="actions">
-                                <button type="submit" title="Men" value="1" class="button">
-                                    <span><span>Men</span></span></button>
-                                <button type="submit" title="Women" value="2" class="button">
-                                    <span><span>Women</span></span></button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-                <script type="text/javascript">
-                    //<![CDATA[
-                    var newsletterSubscriberFormDetail = new VarienForm('newsletter-validate-detail');
-                    $j(document).ready(function () {
-                        $j('#newsletter-validate-detail .button').click(function (e) {
-                            e.preventDefault();
-                            if (newsletterSubscriberFormDetail.validator.validate()) {
-                                $j('#sub-gender').val($j(this).val());
-                                $j('#newsletter-validate-detail').submit();
-                            }
-                        });
-                    });
-                    //]]>
-                </script>
-            </div>
-            <div id="footer-country">
-                <div class="country-wrapper">
-                    <a title="Singapore" class="country-switcher" href="#">
-                        <span class="flag flag-vn"></span>vietnam</a>
-                </div>
-            </div>
-            <address class="copyright">cock.com.vn - © 2017 Cock Colection</address>
         </div>
-        <div>
-        </div>
-        <!-- .footer-container--></div>
+    </div>
+
+</footer><!--/Footer-->
 
 
-</div>
-<!--End Page-->
 
-<script type="text/javascript">
-    //<![CDATA[
-    var searchForm = new Varien.searchForm('search_mini_form', 'search', '');
-    //searchForm.initAutocomplete('', 'search_autocomplete');
-    //]]>
-    function has_value() {
-        var o_search = $j('#search_mini_form #search');
-        var s_v = o_search.val();
-        if (s_v != '') {
-            o_search.addClass('has-value');
-        } else {
-            o_search.removeClass('has-value');
-        }
-    }
-    $j(document).ready(function () {
-        has_value();
-        $j('.search-button').on('click', function () {
-            $j('.skip-link-hover').removeClass('active');
-            $j('.skip-link-hover').removeClass('menu-active');
-        });
-    });
-</script>
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.scrollUp.min.js"></script>
+<script src="../js/price-range.js"></script>
+<script src="../js/jquery.prettyPhoto.js"></script>
+<script src="../js/main.js"></script>
 </body>
 </html>

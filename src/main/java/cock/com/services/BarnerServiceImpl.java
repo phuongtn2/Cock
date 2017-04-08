@@ -16,7 +16,22 @@ public class BarnerServiceImpl implements BarnerService {
     }
 
     @Override
+    public Barner getBarnerById(int id) {
+        return barnerRepository.findOne(id);
+    }
+
+    @Override
+    public Iterable<Barner> listBannerActive() {
+        return barnerRepository.findByStatusOrderByIdDesc((byte)1);
+    }
+
+    @Override
     public Iterable<Barner> listAllBarner() {
         return barnerRepository.findAll();
+    }
+
+    @Override
+    public void saveBaner(Barner barner) {
+        barnerRepository.save(barner);
     }
 }
