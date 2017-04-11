@@ -86,9 +86,9 @@ public class IndexController {
             barner.setStatus(status);
             barner.setActive(active);
             if(!StringUtils.isEmpty(fileName)) {
-                Resource resource = new ClassPathResource("static/images/path.jpg");
+                Resource resource = new ClassPathResource("static/images/path.txt");
                 String path = resource.getURI().getPath();
-                OutputStream outputStream = new FileOutputStream(path.replaceAll("path.jpg", "") + "slide/" + fileName);
+                OutputStream outputStream = new FileOutputStream(path.replaceAll("path.txt", "") + "slide/" + fileName);
                 int bufferSize = 256;
                 BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(outputStream, bufferSize);
                 bufferedOutputStream.write(multipartFile.getBytes());
@@ -164,7 +164,7 @@ public class IndexController {
             product.setSized(sized);
             product.setType(type);
             if(!StringUtils.isEmpty(fileName)) {
-                Resource resource = new ClassPathResource("static/images/path.jpg");
+                Resource resource = new ClassPathResource("static/images/path.txt");
                 String path = resource.getURI().getPath();
                 String pathType = "";
                 if(type == 1)
@@ -181,7 +181,7 @@ public class IndexController {
                     pathType = "mem_belt/";
                 if(type == 7)
                     pathType = "women_belt/";
-                String primaryPath = path.replaceAll("path.jpg", "") + pathType;
+                String primaryPath = path.replaceAll("path.txt", "") + pathType;
                 //Create folder
                 File files = new File(primaryPath + productCode);
                 if (!files.exists()) {
@@ -226,9 +226,9 @@ public class IndexController {
             productRelation.setStatus(status);
             productRelation.setProductId(productId);
             if(!StringUtils.isEmpty(fileName)) {
-                Resource resource = new ClassPathResource("static/images/path.jpg");
+                Resource resource = new ClassPathResource("static/images/path.txt");
                 String path = resource.getURI().getPath();
-                String primaryPath = path.replaceAll("path.jpg", "") + "relation/";
+                String primaryPath = path.replaceAll("path.txt", "") + "relation/";
                 //Create folder
                 File files = new File(primaryPath + productId);
                 if (!files.exists()) {
