@@ -227,8 +227,8 @@ public class IndexController {
             productRelation.setProductId(productId);
             if(!StringUtils.isEmpty(fileName)) {
                 Resource resource = new ClassPathResource("static/images/path.jpg");
-                String primaryPath = path.replaceAll("path.jpg", "") + "relation/";
                 String path = resource.getURI().getPath();
+                String primaryPath = path.replaceAll("path.jpg", "") + "relation/";
                 //Create folder
                 File files = new File(primaryPath + productId);
                 if (!files.exists()) {
