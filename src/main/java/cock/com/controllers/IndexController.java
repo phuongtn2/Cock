@@ -166,15 +166,6 @@ public class IndexController {
             if(!StringUtils.isEmpty(fileName)) {
                 Resource resource = new ClassPathResource("static/images/path.jpg");
                 String path = resource.getURI().getPath();
-                //Create folder
-                File files = new File(path + productCode);
-                if (!files.exists()) {
-                    if (files.mkdirs()) {
-                        System.out.println("Multiple directories are created!");
-                    } else {
-                        System.out.println("Failed to create multiple directories!");
-                    }
-                }
                 String pathType = "";
                 if(type == 1)
                     pathType = "men_wallet/";
@@ -190,7 +181,17 @@ public class IndexController {
                     pathType = "mem_belt/";
                 if(type == 7)
                     pathType = "women_belt/";
-                OutputStream outputStream = new FileOutputStream(path.replaceAll("path.jpg", "") + pathType + productCode + "/" + fileName);
+                String primaryPath = path.replaceAll("path.jpg", "") + pathType;
+                //Create folder
+                File files = new File(primaryPath + productCode);
+                if (!files.exists()) {
+                    if (files.mkdirs()) {
+                        System.out.println("Multiple directories are created!");
+                    } else {
+                        System.out.println("Failed to create multiple directories!");
+                    }
+                }
+                OutputStream outputStream = new FileOutputStream(primaryPath + productCode + "/" + fileName);
                 int bufferSize = 256;
                 BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(outputStream, bufferSize);
                 bufferedOutputStream.write(multipartFile.getBytes());
@@ -226,9 +227,10 @@ public class IndexController {
             productRelation.setProductId(productId);
             if(!StringUtils.isEmpty(fileName)) {
                 Resource resource = new ClassPathResource("static/images/path.jpg");
+                String primaryPath = path.replaceAll("path.jpg", "") + "relation/";
                 String path = resource.getURI().getPath();
                 //Create folder
-                File files = new File(path + productId);
+                File files = new File(primaryPath + productId);
                 if (!files.exists()) {
                     if (files.mkdirs()) {
                         System.out.println("Multiple directories are created!");
@@ -236,7 +238,7 @@ public class IndexController {
                         System.out.println("Failed to create multiple directories!");
                     }
                 }
-                OutputStream outputStream = new FileOutputStream(path.replaceAll("path.jpg", "") + "relation/" + productId + "/" + fileName);
+                OutputStream outputStream = new FileOutputStream(primaryPath + productId + "/" + fileName);
                 int bufferSize = 256;
                 BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(outputStream, bufferSize);
                 bufferedOutputStream.write(multipartFile.getBytes());
