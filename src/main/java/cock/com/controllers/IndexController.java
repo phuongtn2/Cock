@@ -190,7 +190,7 @@ public class IndexController {
                     pathType = "mem_belt/";
                 if(type == 7)
                     pathType = "women_belt/";
-                OutputStream outputStream = new FileOutputStream(path.replaceAll("path.jpg", "") + pathType + fileName);
+                OutputStream outputStream = new FileOutputStream(path.replaceAll("path.jpg", "") + pathType + productCode + "/" + fileName);
                 int bufferSize = 256;
                 BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(outputStream, bufferSize);
                 bufferedOutputStream.write(multipartFile.getBytes());
@@ -236,7 +236,7 @@ public class IndexController {
                         System.out.println("Failed to create multiple directories!");
                     }
                 }
-                OutputStream outputStream = new FileOutputStream(path.replaceAll("path.jpg", "") + "relation/" + fileName);
+                OutputStream outputStream = new FileOutputStream(path.replaceAll("path.jpg", "") + "relation/" + productId + "/" + fileName);
                 int bufferSize = 256;
                 BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(outputStream, bufferSize);
                 bufferedOutputStream.write(multipartFile.getBytes());
