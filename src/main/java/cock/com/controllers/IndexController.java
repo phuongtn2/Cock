@@ -167,7 +167,7 @@ public class IndexController {
                 Resource resource = new ClassPathResource("static/images/path.jpg");
                 String path = resource.getURI().getPath();
                 //Create folder
-                File files = new File(path + "/" + productCode);
+                File files = new File(path + productCode);
                 if (!files.exists()) {
                     if (files.mkdirs()) {
                         System.out.println("Multiple directories are created!");
@@ -228,7 +228,7 @@ public class IndexController {
                 Resource resource = new ClassPathResource("static/images/path.jpg");
                 String path = resource.getURI().getPath();
                 //Create folder
-                File files = new File(path + "/" + productId);
+                File files = new File(path + productId);
                 if (!files.exists()) {
                     if (files.mkdirs()) {
                         System.out.println("Multiple directories are created!");
