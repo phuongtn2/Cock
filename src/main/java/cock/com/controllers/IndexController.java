@@ -18,10 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.thymeleaf.util.StringUtils;
 
-import java.io.BufferedOutputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -169,6 +166,15 @@ public class IndexController {
             if(!StringUtils.isEmpty(fileName)) {
                 Resource resource = new ClassPathResource("static/images/path.jpg");
                 String path = resource.getURI().getPath();
+                //Create folder
+                File files = new File(path + "/" + productCode);
+                if (!files.exists()) {
+                    if (files.mkdirs()) {
+                        System.out.println("Multiple directories are created!");
+                    } else {
+                        System.out.println("Failed to create multiple directories!");
+                    }
+                }
                 String pathType = "";
                 if(type == 1)
                     pathType = "men_wallet/";
@@ -177,11 +183,11 @@ public class IndexController {
                 if(type == 3)
                     pathType = "passpost/";
                 if(type == 4)
-                    pathType = "men_bag/";
+                    pathType = "mem_bag/";
                 if(type == 5)
                     pathType = "women_bag/";
                 if(type == 6)
-                    pathType = "men_belt/";
+                    pathType = "mem_belt/";
                 if(type == 7)
                     pathType = "women_belt/";
                 OutputStream outputStream = new FileOutputStream(path.replaceAll("path.jpg", "") + pathType + fileName);
@@ -191,7 +197,7 @@ public class IndexController {
                 bufferedOutputStream.flush();
                 bufferedOutputStream.close();
                 outputStream.close();
-                String localPath = "../../images/" + pathType + fileName;
+                String localPath = "../../images/" + pathType + productCode + "/" + fileName;
                 product.setImage(localPath);
             }else{
                 product.setImage(tempImage);
@@ -221,6 +227,15 @@ public class IndexController {
             if(!StringUtils.isEmpty(fileName)) {
                 Resource resource = new ClassPathResource("static/images/path.jpg");
                 String path = resource.getURI().getPath();
+                //Create folder
+                File files = new File(path + "/" + productId);
+                if (!files.exists()) {
+                    if (files.mkdirs()) {
+                        System.out.println("Multiple directories are created!");
+                    } else {
+                        System.out.println("Failed to create multiple directories!");
+                    }
+                }
                 OutputStream outputStream = new FileOutputStream(path.replaceAll("path.jpg", "") + "relation/" + fileName);
                 int bufferSize = 256;
                 BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(outputStream, bufferSize);
@@ -228,7 +243,7 @@ public class IndexController {
                 bufferedOutputStream.flush();
                 bufferedOutputStream.close();
                 outputStream.close();
-                String localPath = "../../images/relation/" + fileName;
+                String localPath = "../../images/relation/" + productId + "/" + fileName;
                 productRelation.setImage(localPath);
             }else{
                 productRelation.setImage(tempImage);
