@@ -255,4 +255,10 @@ public class IndexController {
         }
         return "redirect:/relation/" + productId;
     }
+
+    @RequestMapping(value = "/contact", method = RequestMethod.GET)
+    String contact(Model model){
+
+        return "contact-us";
+    }
 }
