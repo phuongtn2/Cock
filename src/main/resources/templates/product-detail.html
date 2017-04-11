@@ -153,7 +153,7 @@
                             <p><b>Price:</b> <span th:text="${product.price}"></span> <span>vnđ</span></p>
                             <p><b>Color:</b> <span th:text="${product.color}"></span></p>
                             <p><b>Brand:</b> S-COCK</p>
-                            <a href=""><img src="../images/product-details/share.png" class="share img-responsive"  alt="" /></a>
+                            <a href="https://www.facebook.com/Fury.com.vn/?fref=ts" target="_blank"><img src="../images/product-details/share.png" class="share img-responsive"  alt="" /></a>
                         </div><!--/product-information-->
                     </div>
                 </div><!--/product-details-->
@@ -168,7 +168,7 @@
 
                         <div class="tab-pane fade active in" id="detail" >
                             <div class="col-sm-12">
-                                <p><span th:text="${product.memo}"></span>.</p>
+                                <label th:text="${product.memo}" style="white-space: pre;"></label>
                                 <b>Rating: </b> <img src="../images/product-details/rating.png" alt="" />
                             </div>
                         </div>
