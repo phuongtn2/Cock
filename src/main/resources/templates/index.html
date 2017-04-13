@@ -59,7 +59,7 @@
         </div>
     </div><!--/header_top-->
 
-    <div class="header-middle"><!--header-middle-->
+    <!--<div class="header-middle">&lt;!&ndash;header-middle&ndash;&gt;
         <div class="container">
             <div class="row">
                 <div class="col-sm-4">
@@ -69,13 +69,18 @@
                 </div>
             </div>
         </div>
-    </div><!--/header-middle-->
+    </div>--><!--/header-middle-->
 </header><!--/header-->
 
 <section id="slider"><!--slider-->
     <div class="container">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-4">
+                <div class="logo pull-left">
+                    <a href="/"><img src="../images/home/logo.jpg" alt="" style="width: 100px; height: 100px"/></a>
+                </div>
+            </div>
+            <div class="col-sm-8">
                 <div id="slider-carousel" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
@@ -88,7 +93,7 @@
                         <div class="item active"  th:each="baner : ${baners}" th:if="${baner.active == 1}">
 
                             <div class="col-sm-6">
-                                <h1><span>S</span>-COCK</h1>
+                                <h1><span>C</span>OCK</h1>
                                 <h2>Cock Collection</h2>
                                 <p>www.cock.com.vn</p>
                                 <button type="button" class="btn btn-default get">Get it now</button>
@@ -99,7 +104,7 @@
                         </div>
                         <div class="item" th:each="baner : ${baners}" th:if="${baner.active == 0}">
                             <div class="col-sm-6">
-                                <h1><span>S</span>-COCK</h1>
+                                <h1><span>C</span>OCK</h1>
                                 <h2>Cock Collection</h2>
                                 <p>www.cock.com.vn</p>
                                 <button type="button" class="btn btn-default get">Get it now</button>
@@ -185,7 +190,7 @@
             <div class="col-sm-9 padding-right">
                 <div class="features_items"><!--features_items-->
                     <h2 class="title text-center">Features Items</h2>
-		    <div class="col-sm-12" style="background-color: blue;height: 30px;text-align: center;font-size: 20px;font-family: fantasy;"> Men Wallet</div>
+		    <div class="col-sm-12" style="background-color: #02a6e3;height: 30px;text-align: center;font-size: 20px;font-family: fantasy;"> Men Wallet</div>
                     <div class="col-sm-4" th:each="wallet : ${menWallets}">
                         <div class="product-image-wrapper">
                             <div class="single-products">
@@ -198,7 +203,7 @@
                             </div>
                         </div>
                     </div>
-			<div class="col-sm-12" style="background-color: blue;height: 30px;text-align: center;font-size: 20px;font-family: fantasy;"> Women Wallet</div>
+			<div class="col-sm-12" style="background-color: #02a6e3;height: 30px;text-align: center;font-size: 20px;font-family: fantasy;"> Women Wallet</div>
                     <div class="col-sm-4" th:each="wallet : ${womenWallets}">
                         <div class="product-image-wrapper">
                             <div class="single-products">
@@ -211,7 +216,7 @@
                             </div>
                         </div>
                     </div>
-			<div class="col-sm-12" style="background-color: blue;height: 30px;text-align: center;font-size: 20px;font-family: fantasy;"> Passport Wallet</div>
+			<div class="col-sm-12" style="background-color: #02a6e3;height: 30px;text-align: center;font-size: 20px;font-family: fantasy;"> Passport Wallet</div>
                     <div class="col-sm-4" th:each="pass : ${passposts}">
                         <div class="product-image-wrapper">
                             <div class="single-products">
