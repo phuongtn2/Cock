@@ -6,6 +6,11 @@
     <meta name="description" content=""/>
     <meta name="author" content=""/>
     <title>Home | Cock</title>
+    <link href="../css/dist/photoswipe.css?v=4.1.1-1.0.4" rel="stylesheet" />
+    <link href="../css/dist/default-skin/default-skin.css" rel="stylesheet" />
+    <script src="../css/dist/photoswipe.min.js"></script>
+    <script src="../css/dist/photoswipe-ui-default.min.js"></script>
+    <script src="../js/jquery-2.1.1.js"></script>
     <link href="../css/bootstrap.min.css" rel="stylesheet"/>
     <link href="../css/font-awesome.min.css" rel="stylesheet"/>
     <link href="../css/prettyPhoto.css" rel="stylesheet"/>
@@ -118,6 +123,7 @@
                     <div class="col-sm-5">
                         <div class="view-product">
                             <img th:src="${product.image}" alt="" />
+                            <h3 onclick="largeImg()">ZOOM +</h3>
                         </div>
                         <div id="similar-product" class="carousel slide" data-ride="carousel">
 
@@ -229,6 +235,104 @@
             </div>
         </div>
     </div>
+
+    <div id="gallery" class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+
+                <div class="pswp__top-bar">
+
+                    <div class="pswp__counter"></div>
+
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <script type="text/javascript">
+        //<![CDATA[
+        function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for(var i = 0; i < ca.length ; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        function largeImg() {
+            var list = getCookie("listImg");
+            var array = list.split("99");
+            var pswpElement = document.querySelectorAll('.pswp')[0];
+            var items = [
+            ];
+            for(var i = 0; i < array.length ; i ++){
+                var item = {
+                    src: array[i],
+                    w: 2000,
+                    h: 2000
+                };
+                items.push(item);
+            }
+            var options = {
+                // optionName: 'option value'
+                // for example:
+                index: 0,// start at first slide
+                mainClass: 'pswp--minimal--dark',
+                barsSize:{top:0,bottom:0},
+                captionEl: false,
+                fullscreenEl: true,
+                shareEl: false,
+                bgOpacity: 0.85,
+                tapToClose: true,
+                tapToToggleControls: true
+            };
+            var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+            gallery.init();
+        };
+        //]]>
+
+    </script>
 
 </footer><!--/Footer-->
 
