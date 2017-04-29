@@ -19,11 +19,9 @@ import org.springframework.web.multipart.MultipartFile;
 import org.thymeleaf.util.StringUtils;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Controller
-public class IndexController {
+public class AdminController {
     private BarnerService barnerService;
     private ProductService productService;
     private ProductRelationService productRelationService;
@@ -39,7 +37,7 @@ public class IndexController {
     public void setProductRelationService(ProductRelationService productRelationService) {
         this.productRelationService = productRelationService;
     }
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    /*@RequestMapping(value = "/", method = RequestMethod.GET)
     String index(Model model){
         model.addAttribute("baners", barnerService.listBannerActive());
         model.addAttribute("menWallets", productService.listMenWalletProducts());
@@ -50,28 +48,28 @@ public class IndexController {
         model.addAttribute("menBelts", productService.listMenBeltProducts());
         model.addAttribute("womenBelts", productService.listWomenBeltProducts());
         return "index";
-    }
-   /* @RequestMapping(value = "/admin", method = RequestMethod.GET)
+    }*/
+    @RequestMapping(value = "/admin", method = RequestMethod.GET)
     String admin(Model model){
         model.addAttribute("products", productService.listAllProduct());
         return "admin";
     }
-    @RequestMapping(value = "/baners", method = RequestMethod.GET)
+    @RequestMapping(value = "/admin/baners", method = RequestMethod.GET)
     String baners(Model model){
         model.addAttribute("baners", barnerService.listAllBarner());
         return "baners";
     }
-    @RequestMapping(value = "/baner/edit/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/admin/baner/edit/{id}", method = RequestMethod.GET)
     String editBaner(@PathVariable Integer id, Model model){
         model.addAttribute("baner", barnerService.getBarnerById(id));
         return "baner-form";
     }
-    @RequestMapping("/baner/add")
+    @RequestMapping("/admin/baner/add")
     public String newBaner(Model model){
         model.addAttribute("baner", new Barner());
         return "baner-form";
     }
-    @RequestMapping(value = "/baner/save", produces = "application/json", consumes = "multipart/form-data", headers = "Content-Type= multipart/related", method = RequestMethod.POST)
+    @RequestMapping(value = "/admin/baner/save", produces = "application/json", consumes = "multipart/form-data", headers = "Content-Type= multipart/related", method = RequestMethod.POST)
     public String saveBaner(@RequestParam("image") MultipartFile multipartFile, @RequestParam("status") byte status,
                               @RequestParam("active") Integer active,
                               @RequestParam("tempImage") String tempImage,
@@ -105,38 +103,38 @@ public class IndexController {
             e.printStackTrace();
         }finally {
         }
-        return "redirect:/baners";
+        return "redirect:/admin/baners";
     }
 
-    @RequestMapping(value = "/product/edit/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/admin/product/edit/{id}", method = RequestMethod.GET)
     String editProduct(@PathVariable Long id, Model model){
         model.addAttribute("product", productService.getProductById(id));
         return "product-form";
     }
-    @RequestMapping(value = "/relation/edit/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/admin/relation/edit/{id}", method = RequestMethod.GET)
     String editProductRelation(@PathVariable Long id, Model model){
         model.addAttribute("relation", productRelationService.getById(id));
         return "relation-form";
     }
-    @RequestMapping(value = "/relation/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/admin/relation/{id}", method = RequestMethod.GET)
     String viewProductRelation(@PathVariable Long id, Model model){
         model.addAttribute("product", productService.getProductById(id));
         model.addAttribute("productRelations", productRelationService.listAllByProductId(id));
         return "product-relation";
     }
-    @RequestMapping("/product/add")
+    @RequestMapping("/admin/product/add")
     public String newProduct(Model model){
         model.addAttribute("product", new Product());
         return "product-form";
     }
-    @RequestMapping("/relation/add/{id}")
+    @RequestMapping("/admin/relation/add/{id}")
     public String newProductRelation(@PathVariable Long id, Model model){
         ProductRelation productRelation = new ProductRelation();
         productRelation.setProductId(id);
         model.addAttribute("relation", productRelation);
         return "relation-form";
     }
-    @RequestMapping(value = "/product/save", produces = "application/json", consumes = "multipart/form-data", headers = "Content-Type= multipart/related", method = RequestMethod.POST)
+    @RequestMapping(value = "/admin/product/save", produces = "application/json", consumes = "multipart/form-data", headers = "Content-Type= multipart/related", method = RequestMethod.POST)
     public String saveProduct(@RequestParam("image") MultipartFile multipartFile,
                               @RequestParam("status") byte status,
                               @RequestParam("tempImage") String tempImage,
@@ -211,7 +209,7 @@ public class IndexController {
         return "redirect:/admin";
     }
 
-    @RequestMapping(value = "/relation/save", produces = "application/json", consumes = "multipart/form-data", headers = "Content-Type= multipart/related", method = RequestMethod.POST)
+    @RequestMapping(value = "/admin/relation/save", produces = "application/json", consumes = "multipart/form-data", headers = "Content-Type= multipart/related", method = RequestMethod.POST)
     public String saveRelation(@RequestParam("image") MultipartFile multipartFile, @RequestParam("status") byte status,
                             @RequestParam("tempImage") String tempImage,
                             @RequestParam("productId") long productId,
@@ -255,12 +253,12 @@ public class IndexController {
             e.printStackTrace();
         }finally {
         }
-        return "redirect:/relation/" + productId;
+        return "redirect:/admin/relation/" + productId;
     }
-*/
-    @RequestMapping(value = "/contact", method = RequestMethod.GET)
+
+    /*@RequestMapping(value = "/contact", method = RequestMethod.GET)
     String contact(Model model){
 
         return "contact-us";
-    }
+    }*/
 }
