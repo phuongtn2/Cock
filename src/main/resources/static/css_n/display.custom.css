@@ -1,0 +1,13 @@
+.penci-grid .list-post.list-boxed-post{ border-color: #ffffff !important; }
+
+@media only screen and (min-width: 1169px) {
+    .container{ width: 1050px; }
+    .wrapper-boxed.enable-boxed .is-sticky #navigation{ width: 1090px; }
+}
+
+.footer-widget-wrapper .widget .widget-title .inner-arrow{ border: none; padding-bottom: 0; }
+.footer-widget-wrapper .widget .widget-title:after{ content: none; }
+
+.archive-box h1, .penci-page-header h1{ color: #313131; }
+.archive-box, .penci-page-header{ padding-bottom: 0; }
+.archive-box:before, .archive-box:after, .penci-page-header:before, .penci-page-header:after{ content: none; }

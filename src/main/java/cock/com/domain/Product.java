@@ -16,6 +16,7 @@ public class Product {
     private String image;
     private byte status;
     private byte type = 1;
+    private String title;
 
     public long getProductId() {
         return productId;
@@ -95,5 +96,13 @@ public class Product {
 
     public void setType(byte type) {
         this.type = type;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

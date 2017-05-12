@@ -72,6 +72,16 @@
                                 <h4 class="panel-title"><a href="/admin/baner/add">Add Baner</a></h4>
                             </div>
                         </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a href="/admin/home">List Home</a></h4>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a href="/admin/home/add">Add Home</a></h4>
+                            </div>
+                        </div>
                     </div><!--/category-products-->
 
                 </div>
@@ -91,6 +101,12 @@
                         <label class="col-sm-2 control-label">Product Name:</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" th:field="${product.productName}"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Sub Description:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" th:field="${product.title}"/>
                         </div>
                     </div>
                     <div class="form-group">

@@ -21,34 +21,34 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Iterable<Product> listMenWalletProducts() {
-        return productRepository.findTop3ByTypeAndStatusOrderByProductIdAsc((byte) 1, (byte)1);
+        return productRepository.findTop4ByTypeAndStatusOrderByProductIdAsc((byte) 1, (byte)1);
     }
     @Override
     public Iterable<Product> listWomenWalletProducts() {
-        return productRepository.findTop3ByTypeAndStatusOrderByProductIdAsc((byte) 2, (byte)1);
+        return productRepository.findTop4ByTypeAndStatusOrderByProductIdAsc((byte) 2, (byte)1);
     }
 
     @Override
     public Iterable<Product> listPasspostWalletProducts() {
-        return productRepository.findTop3ByTypeAndStatusOrderByProductIdAsc((byte) 3, (byte)1);
+        return productRepository.findTop5ByTypeAndStatusOrderByProductIdAsc((byte) 3, (byte)1);
     }
 
     @Override
     public Iterable<Product> listMenBagProducts() {
-        return productRepository.findTop3ByTypeAndStatusOrderByProductIdAsc((byte) 4, (byte)1);
+        return productRepository.findTop4ByTypeAndStatusOrderByProductIdAsc((byte) 4, (byte)1);
     }
     @Override
     public Iterable<Product> listWomenBagProducts() {
-        return productRepository.findTop3ByTypeAndStatusOrderByProductIdAsc((byte) 5, (byte)1);
+        return productRepository.findTop4ByTypeAndStatusOrderByProductIdAsc((byte) 5, (byte)1);
     }
 
     @Override
     public Iterable<Product> listMenBeltProducts() {
-        return productRepository.findTop3ByTypeAndStatusOrderByProductIdAsc((byte) 6, (byte)1);
+        return productRepository.findTop4ByTypeAndStatusOrderByProductIdAsc((byte) 6, (byte)1);
     }
     @Override
     public Iterable<Product> listWomenBeltProducts() {
-        return productRepository.findTop3ByTypeAndStatusOrderByProductIdAsc((byte) 7, (byte)1);
+        return productRepository.findTop4ByTypeAndStatusOrderByProductIdAsc((byte) 7, (byte)1);
     }
 
     @Override

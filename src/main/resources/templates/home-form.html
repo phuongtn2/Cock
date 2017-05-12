@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head><!--/head-->
+
+<body>
+<header id="header"><!--header-->
+    <div class="header_top"><!--header_top-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="contactinfo">
+                        <ul class="nav nav-pills">
+                            <li><a href="#"><i class="fa fa-phone"></i> +84(938-365-434)</a></li>
+                            <li><a href="#"><i class="fa fa-envelope"></i> thanhluan321988@gmail.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="social-icons pull-right">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/header_top-->
+
+    <div class="header-middle"><!--header-middle-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="logo pull-left">
+                        <a href="/"><img src="/images/home/logo.jpg" alt="" style="width: 100px; height: 100px"/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/header-middle-->
+</header><!--/header-->
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="left-sidebar">
+                    <h2>Category</h2>
+                    <div class="panel-group category-products" id="accordian"><!--category-productsr-->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a href="/admin">List Product</a></h4>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a href="/admin/product/add">Add Product</a></h4>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a href="/admin/baners">List Baner</a></h4>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a href="/admin/baner/add">Add Baner</a></h4>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a href="/admin/home">List Home</a></h4>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title"><a href="/admin/home/add">Add Home</a></h4>
+                            </div>
+                        </div>
+                    </div><!--/category-products-->
+
+                </div>
+            </div>
+
+            <div class="col-sm-9 padding-right">
+                <h2>Add/Edit Product Relation</h2>
+                <form class="form-horizontal" action="/admin/home/save" method="post">
+                    <input type="hidden" th:field="${home.id}"/>
+                    <!--<div class="form-group">
+                        <label class="col-sm-2 control-label">Product Id:</label>
+                        <div class="col-sm-10">
+                            <input type="hidden" th:field="${relation.productId}"/>
+                            <span th:text="${relation.productId}"></span>
+                        </div>
+                    </div>-->
+                    <!--<div class="form-group">
+                        <label class="col-sm-2 control-label">Image Url:</label>
+                        <div class="col-sm-10">
+                            <span th:text="${relation.image}"></span>
+                        </div>
+                        <div class="col-sm-10">
+                            <input type="hidden" class="form-control" name="tempImage" th:value="${relation.image}"/>
+                            <input type="file" class="form-control" th:field="${relation.image}"/>
+                        </div>
+                    </div>-->
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Product:</label>
+                        <div class="col-sm-10">
+                            <!--<input type="text" class="form-control" th:field="*{status}"/>-->
+                            <select class="form-control" th:field="${home.productId}">
+                                <option th:each="p :${products}" th:value="${p.productId}" selected="true"><span th:text="${p.productName}"></span> </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">&nbsp;</label>
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer id="footer"><!--Footer-->
+
+    <!--<div class="footer-widget">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="single-widget">
+                        <a href="/contact"><h2>Contact Us</h2></a>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="single-widget">
+                        <a href="/contact"><h2>About Cock</h2></a>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="single-widget">
+                        <h2>Policies</h2>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="single-widget">
+                        <h2>Service</h2>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-sm-offset-1">
+                    <div class="single-widget">
+                        <h2>About Cock</h2>
+                        <form action="#" class="searchform">
+                            <input type="text" placeholder="Your email address" />
+                            <button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+                            <p>Get the most recent updates from <br />our site and be updated your self.</p>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>-->
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <p class="pull-left">Copyright © 2017 Cock. All rights reserved.</p>
+                <p class="pull-right">Designed by <span><a href="/">Cock</a></span></p>
+            </div>
+        </div>
+    </div>
+
+</footer><!--/Footer-->
+
+
+
+<!--<script src="//js/jquery.js"></script>
+<script src="//js/bootstrap.min.js"></script>
+<script src="//js/jquery.scrollUp.min.js"></script>
+<script src="//js/price-range.js"></script>
+<script src="//js/jquery.prettyPhoto.js"></script>
+<script src="//js/main.js"></script>-->
+</body>
+</html>

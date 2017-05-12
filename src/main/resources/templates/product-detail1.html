@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head lang="en">
+    <!--/*/ <th:block th:include="fragments/include_header :: head"></th:block> /*/-->
+</head>
+
+<body class="home blog">
+<a id="close-sidebar-nav" class="header-5"><i class="fa fa-close"></i></a>
+
+<nav id="sidebar-nav" class="header-5">
+    <div id="sidebar-nav-logo">
+        <a href="/"><img src="/images/home/logo.jpg" style="width:150px; height: 100px;"/></a>
+    </div>
+    <!-- Menu -->
+    <ul id="menu-navigation" class="menu">
+        <li id="menu-item-42879"
+            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-42879"><a href="/">Home</a>
+            <!--<ul class="sub-menu">
+                <li id="menu-item-42190"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42190"><a
+                        href="https://www.facebook.com/Fury.com.vn/?fref=ts">Facebook</a></li>
+                &lt;!&ndash;<li id="menu-item-43011"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43011"><a
+                        href="http://lecitykitty.com/shop/instagram/">Instagram</a></li>&ndash;&gt;
+            </ul>-->
+        </li>
+        <li id="menu-item-44031"
+            class="menu-item menu-item-type-taxonomy menu-item-object-category penci-mega-menu menu-item-44031"><a
+                href="/products/men-wallet">Wallet</a>
+            <ul class="sub-menu">
+                <li id="menu-item-0" class="menu-item-0">
+                    <div class="penci-megamenu">
+                        <div class="penci-mega-child-categories">
+                            <a class="mega-cat-child cat-active" href="/products/men-wallet"
+                               data-id="penci-mega-3683">Men Wallet</a>
+                            <a class="mega-cat-child" href="/products/women-wallet"
+                               data-id="penci-mega-1699">Women Wallet</a>
+                        </div>
+
+                        <div class="penci-content-megamenu">
+                            <div class="penci-mega-latest-posts col-mn-4 mega-row-1">
+                                <div class="penci-mega-row penci-mega-3683 row-active">
+                                    <div class="penci-mega-post" th:each="m : ${menWallets}">
+                                        <div class="penci-mega-thumbnail">
+                                            <span class="mega-cat-name">Men Wallet</span>
+                                            <a class="penci-image-holder"
+                                               th:style="'background-image:url(' + ${m.image} + ');'"
+                                               th:href="${ '/product/' + m.productId}">
+                                            </a>
+                                        </div>
+                                        <div class="penci-mega-meta">
+                                            <h3 class="post-mega-title">
+                                                <a th:href="${ '/product/' + m.productId}"><span th:text="${m.productName}"></span> </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="penci-mega-row penci-mega-1699">
+                                    <div class="penci-mega-post" th:each="m : ${womenWallets}">
+                                        <div class="penci-mega-thumbnail">
+                                            <span class="mega-cat-name">Women Wallet</span>
+                                            <a class="penci-image-holder"
+                                               th:style="'background-image:url(' + ${m.image} + ');'"
+                                               th:href="${ '/product/' + m.productId}">
+                                            </a>
+                                        </div>
+                                        <div class="penci-mega-meta">
+                                            <h3 class="post-mega-title">
+                                                <a th:href="${ '/product/' + m.productId}"><span th:text="${m.productName}"></span> </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li id="menu-item-41447"
+            class="menu-item menu-item-type-taxonomy menu-item-object-category penci-mega-menu menu-item-41447"><a
+                href="/products/passport-wallet">Passport Wallet</a>
+            <ul class="sub-menu">
+                <li class="menu-item-0">
+                    <div class="penci-megamenu">
+                        <div class="penci-content-megamenu">
+                            <div class="penci-mega-latest-posts col-mn-5 mega-row-1">
+                                <div class="penci-mega-row penci-mega-3511 row-active">
+                                    <div class="penci-mega-post" th:each="m : ${passports}">
+                                        <div class="penci-mega-thumbnail">
+                                            <span class="mega-cat-name">Passport Wallet</span>
+                                            <a class="penci-image-holder"
+                                               th:style="'background-image:url(' + ${m.image} + ');'"
+                                               th:href="${ '/product/' + m.productId}">
+                                            </a>
+                                        </div>
+                                        <div class="penci-mega-meta">
+                                            <h3 class="post-mega-title">
+                                                <a th:href="${ '/product/' + m.productId}"><span th:text="${m.productName}"></span> </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li id="menu-item-44032"
+            class="menu-item menu-item-type-taxonomy menu-item-object-category penci-mega-menu menu-item-44032"><a
+                href="/products/men-bag">Bag</a>
+            <ul class="sub-menu">
+                <li class="menu-item-0">
+                    <div class="penci-megamenu">
+                        <div class="penci-mega-child-categories">
+                            <a class="mega-cat-child cat-active" href="/products/men-bag"
+                               data-id="penci-mega-3683">Men Bag</a>
+                            <a class="mega-cat-child" href="/products/women-bag"
+                               data-id="penci-mega-1699">Women Bag</a>
+                        </div>
+
+                        <div class="penci-content-megamenu">
+                            <div class="penci-mega-latest-posts col-mn-4 mega-row-1">
+                                <div class="penci-mega-row penci-mega-3683 row-active">
+                                    <div class="penci-mega-post" th:each="m : ${menBags}">
+                                        <div class="penci-mega-thumbnail">
+                                            <span class="mega-cat-name">Men Bag</span>
+                                            <a class="penci-image-holder"
+                                               th:style="'background-image:url(' + ${m.image} + ');'"
+                                               th:href="${ '/product/' + m.productId}">
+                                            </a>
+                                        </div>
+                                        <div class="penci-mega-meta">
+                                            <h3 class="post-mega-title">
+                                                <a th:href="${ '/product/' + m.productId}"><span th:text="${m.productName}"></span> </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="penci-mega-row penci-mega-1699">
+                                    <div class="penci-mega-post" th:each="m : ${womenBags}">
+                                        <div class="penci-mega-thumbnail">
+                                            <span class="mega-cat-name">Women Belt</span>
+                                            <a class="penci-image-holder"
+                                               th:style="'background-image:url(' + ${m.image} + ');'"
+                                               th:href="${ '/product/' + m.productId}">
+                                            </a>
+                                        </div>
+                                        <div class="penci-mega-meta">
+                                            <h3 class="post-mega-title">
+                                                <a th:href="${ '/product/' + m.productId}"><span th:text="${m.productName}"></span> </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li id="menu-item-44033"
+            class="menu-item menu-item-type-taxonomy menu-item-object-category penci-mega-menu menu-item-44033"><a
+                href="/products/men-belt">Belt</a>
+            <ul class="sub-menu">
+                <li class="menu-item-0">
+                    <div class="penci-megamenu">
+                        <div class="penci-mega-child-categories">
+                            <a class="mega-cat-child cat-active" href="/products/men-belt"
+                               data-id="penci-mega-3683">Men Belt</a>
+                            <a class="mega-cat-child" href="/products/women-belt"
+                               data-id="penci-mega-1699">Women Belt</a>
+                        </div>
+
+                        <div class="penci-content-megamenu">
+                            <div class="penci-mega-latest-posts col-mn-4 mega-row-1">
+                                <div class="penci-mega-row penci-mega-3683 row-active">
+                                    <div class="penci-mega-post" th:each="m : ${menBelts}">
+                                        <div class="penci-mega-thumbnail">
+                                            <span class="mega-cat-name">Women Belt</span>
+                                            <a class="penci-image-holder"
+                                               th:style="'background-image:url(' + ${m.image} + ');'"
+                                               th:href="${ '/product/' + m.productId}">
+                                            </a>
+                                        </div>
+                                        <div class="penci-mega-meta">
+                                            <h3 class="post-mega-title">
+                                                <a th:href="${ '/product/' + m.productId}"><span th:text="${m.productName}"></span> </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="penci-mega-row penci-mega-1699">
+                                    <div class="penci-mega-post" th:each="m : ${womenBelts}">
+                                        <div class="penci-mega-thumbnail">
+                                            <span class="mega-cat-name">Women Bag</span>
+                                            <a class="penci-image-holder"
+                                               th:style="'background-image:url(' + ${m.image} + ');'"
+                                               th:href="${ '/product/' + m.productId}">
+                                            </a>
+                                        </div>
+                                        <div class="penci-mega-meta">
+                                            <h3 class="post-mega-title">
+                                                <a th:href="${ '/product/' + m.productId}"><span th:text="${m.productName}"></span> </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li id="menu-item-29639"
+            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-29639"><a
+                href="/feature">About</a>
+            <ul class="sub-menu">
+                <li id="menu-item-40779"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40779"><a
+                        href="/feature">FAQ</a></li>
+                <li id="menu-item-43012"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43012"><a
+                        href="/feature">Features</a></li>
+            </ul>
+        </li>
+        <!--<li id="menu-item-42872" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42872"><a
+                href="http://lecitykitty.com/subscribe/">Subscribe</a></li>-->
+        <li id="menu-item-43238" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43238"><a
+                href="/contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- .wrapper-boxed -->
+<div class="wrapper-boxed header-style-header-5">
+    <!-- Top Bar -->
+    <div class="penci-top-bar">
+        <div class="container">
+            <div class="penci-headline">
+                <span class="headline-title">The Latest</span>
+                <div class="penci-topbar-social">
+                    <div class="inner-header-social">
+                        <a href="https://www.facebook.com/lecitykitty/" target="_blank"><i
+                                class="fa fa-facebook"></i></a>
+                        <a href="https://www.facebook.com/Fury.com.vn/?fref=ts" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/Fury.com.vn/?fref=ts" target="_blank"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/Fury.com.vn/?fref=ts" target="_blank"><i class="fa fa-pinterest"></i></a>
+                        <a href="https://www.facebook.com/Fury.com.vn/?fref=ts" target="_blank"><i class="fa fa-tumblr"></i></a>
+                        <a href="mailto:thanhluan321988@gmail.com"><i class="fa fa-envelope-o"></i></a>
+                        <a href="https://www.facebook.com/Fury.com.vn/?fref=ts" target="_blank"><i class="fa fa-heart"></i></a>
+                        <a href="https://www.facebook.com/Fury.com.vn/?fref=ts" target="_blank"><i class="fa fa-soundcloud"></i></a>
+                        <a href="https://www.facebook.com/Fury.com.vn/?fref=ts" target="_blank"><i class="fa fa-snapchat-ghost"></i></a>
+                        <a href="https://www.facebook.com/Fury.com.vn/?fref=ts" target="_blank"><i class="fa fa-spotify"></i></a>
+                    </div>
+                </div>
+                <div class="penci-headline-posts" data-auto="true" data-autotime="3000" data-speed="300" data-direction="vertical">
+                    <div>
+                        <a class="penci-topbar-post-title"
+                           href="/products/men-wallet"> Men Wallet</a>
+                    </div>
+                    <div>
+                        <a class="penci-topbar-post-title" href="/products/women-wallet">Women Wallet</a>
+                    </div>
+                    <div>
+                        <a class="penci-topbar-post-title" href="/products/passport-wallet">Passport Wallet</a>
+                    </div>
+                    <div>
+                        <a class="penci-topbar-post-title" href="/products/men-bag">Men Bag</a>
+                    </div>
+                    <div>
+                        <a class="penci-topbar-post-title" href="/products/women-bag">Women Bag</a>
+                    </div>
+                    <div>
+                        <a class="penci-topbar-post-title" href="/products/men-belt">Men Belt</a>
+                    </div>
+                    <div>
+                        <a class="penci-topbar-post-title" href="/products/women-belt">Women Belt</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Top -->
+
+    <header id="header" class="header-header-5 has-bottom-line"><!-- #header -->
+        <div class="inner-header">
+            <div class="container">
+                <div id="logo">
+                    <h1>
+                        <a href="/"><img
+                                src="/images/home/logo.jpg" style="width:150px; height: 100px;"/></a>
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation -->
+        <nav id="navigation" class="header-layout-bottom header-5">
+            <div class="container">
+                <div class="button-menu-mobile header-5"><i class="fa fa-bars"></i></div>
+                <ul id="menu-navigation-1" class="menu">
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-42879">
+                        <a href="/">Home</a>
+                        <!--<ul class="sub-menu">
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42190"><a
+                                    href="https://www.facebook.com/Fury.com.vn/?fref=ts">Facebook</a></li>
+                            &lt;!&ndash;<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43011"><a
+                                    href="http://lecitykitty.com/shop/instagram/">Instagram</a></li>&ndash;&gt;
+                        </ul>-->
+                    </li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category penci-mega-menu menu-item-44031">
+                        <a href="/products/men-wallet">Wallet</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item-0">
+                                <div class="penci-megamenu">
+                                    <div class="penci-mega-child-categories">
+                                        <a class="mega-cat-child cat-active"
+                                           href="/products/men-wallet" data-id="penci-mega-3683">Men Wallet</a>
+                                        <a class="mega-cat-child"
+                                           href="/products/women-wallet"
+                                           data-id="penci-mega-1699">Women Wallet</a>
+                                    </div>
+
+                                    <div class="penci-content-megamenu">
+                                        <div class="penci-mega-latest-posts col-mn-4 mega-row-1">
+                                            <div class="penci-mega-row penci-mega-3683 row-active">
+                                                <div class="penci-mega-post" th:each="m : ${menWallets}">
+                                                    <div class="penci-mega-thumbnail">
+                                                        <span class="mega-cat-name">Men Wallet</span>
+                                                        <a class="penci-image-holder"
+                                                           th:style="'background-image:url(' + ${m.image} + ');'"
+                                                           th:href="${ '/product/' + m.productId}">
+                                                        </a>
+                                                    </div>
+                                                    <div class="penci-mega-meta">
+                                                        <h3 class="post-mega-title">
+                                                            <a th:href="${ '/product/' + m.productId}"><span th:text="${m.productName}"></span> </a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="penci-mega-row penci-mega-1699">
+                                                <div class="penci-mega-post" th:each="m : ${womenWallets}">
+                                                    <div class="penci-mega-thumbnail">
+                                                        <span class="mega-cat-name">Woment Wallet</span>
+                                                        <a class="penci-image-holder"
+                                                           th:style="'background-image:url(' + ${m.image} + ');'"
+                                                           th:href="${ '/product/' + m.productId}">
+                                                        </a>
+                                                    </div>
+                                                    <div class="penci-mega-meta">
+                                                        <h3 class="post-mega-title">
+                                                            <a th:href="${ '/product/' + m.productId}"><span th:text="${m.productName}"></span> </a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category penci-mega-menu menu-item-41447">
+                        <a href="/products/passport-wallet">Passport Wallet</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item-0">
+                                <div class="penci-megamenu">
+                                    <div class="penci-content-megamenu">
+                                        <div class="penci-mega-latest-posts col-mn-5 mega-row-1">
+                                            <div class="penci-mega-row penci-mega-3511 row-active">
+                                                <div class="penci-mega-post" th:each="m : ${passports}">
+                                                    <div class="penci-mega-thumbnail">
+                                                        <span class="mega-cat-name">Passport Wallet</span>
+                                                        <a class="penci-image-holder"
+                                                           th:style="'background-image:url(' + ${m.image} + ');'"
+                                                           th:href="${ '/product/' + m.productId}">
+                                                        </a>
+                                                    </div>
+                                                    <div class="penci-mega-meta">
+                                                        <h3 class="post-mega-title">
+                                                            <a th:href="${ '/product/' + m.productId}"><span th:text="${m.productName}"></span> </a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category penci-mega-menu menu-item-44032">
+                        <a href="/products/men-bag">Bag</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item-0">
+                                <div class="penci-megamenu">
+                                    <div class="penci-mega-child-categories">
+                                        <a class="mega-cat-child cat-active"
+                                           href="/products/men-bag" data-id="penci-mega-3683">Men Bag</a>
+                                        <a class="mega-cat-child"
+                                           href="/products/women-bag"
+                                           data-id="penci-mega-1699">Women Bag</a>
+                                    </div>
+
+                                    <div class="penci-content-megamenu">
+                                        <div class="penci-mega-latest-posts col-mn-4 mega-row-1">
+                                            <div class="penci-mega-row penci-mega-3683 row-active">
+                                                <div class="penci-mega-post" th:each="m : ${menBags}">
+                                                    <div class="penci-mega-thumbnail">
+                                                        <span class="mega-cat-name">Men Bag</span>
+                                                        <a class="penci-image-holder"
+                                                           th:style="'background-image:url(' + ${m.image} + ');'"
+                                                           th:href="${ '/product/' + m.productId}">
+                                                        </a>
+                                                    </div>
+                                                    <div class="penci-mega-meta">
+                                                        <h3 class="post-mega-title">
+                                                            <a th:href="${ '/product/' + m.productId}"><span th:text="${m.productName}"></span> </a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="penci-mega-row penci-mega-1699">
+                                                <div class="penci-mega-post" th:each="m : ${womenBags}">
+                                                    <div class="penci-mega-thumbnail">
+                                                        <span class="mega-cat-name">Women Bag</span>
+                                                        <a class="penci-image-holder"
+                                                           th:style="'background-image:url(' + ${m.image} + ');'"
+                                                           th:href="${ '/product/' + m.productId}">
+                                                        </a>
+                                                    </div>
+                                                    <div class="penci-mega-meta">
+                                                        <h3 class="post-mega-title">
+                                                            <a th:href="${ '/product/' + m.productId}"><span th:text="${m.productName}"></span> </a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category penci-mega-menu menu-item-44033">
+                        <a href="/products/men-belt">Belt</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item-0">
+                                <div class="penci-megamenu">
+                                    <div class="penci-mega-child-categories">
+                                        <a class="mega-cat-child cat-active"
+                                           href="/products/men-belt" data-id="penci-mega-3683">Men Belt</a>
+                                        <a class="mega-cat-child"
+                                           href="/products/women-belt"
+                                           data-id="penci-mega-1699">Women Belt</a>
+                                    </div>
+
+                                    <div class="penci-content-megamenu">
+                                        <div class="penci-mega-latest-posts col-mn-4 mega-row-1">
+                                            <div class="penci-mega-row penci-mega-3683 row-active">
+                                                <div class="penci-mega-post" th:each="m : ${menBelts}">
+                                                    <div class="penci-mega-thumbnail">
+                                                        <span class="mega-cat-name">Men Belt</span>
+                                                        <a class="penci-image-holder"
+                                                           th:style="'background-image:url(' + ${m.image} + ');'"
+                                                           th:href="${ '/product/' + m.productId}">
+                                                        </a>
+                                                    </div>
+                                                    <div class="penci-mega-meta">
+                                                        <h3 class="post-mega-title">
+                                                            <a th:href="${ '/product/' + m.productId}"><span th:text="${m.productName}"></span> </a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="penci-mega-row penci-mega-1699">
+                                                <div class="penci-mega-post" th:each="m : ${womenBelt}">
+                                                    <div class="penci-mega-thumbnail">
+                                                        <span class="mega-cat-name">Women Belt</span>
+                                                        <a class="penci-image-holder"
+                                                           th:style="'background-image:url(' + ${m.image} + ');'"
+                                                           th:href="${ '/product/' + m.productId}">
+                                                        </a>
+                                                    </div>
+                                                    <div class="penci-mega-meta">
+                                                        <h3 class="post-mega-title">
+                                                            <a th:href="${ '/product/' + m.productId}"><span th:text="${m.productName}"></span> </a>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-29639">
+                        <a href="/feature">About</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40779"><a
+                                    href="/feature">FAQ</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43012"><a
+                                    href="/feature">Features</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42872"><a
+                             href="http://lecitykitty.com/subscribe/">Subscribe</a></li>-->
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43238"><a
+                            href="/contact">Contact</a></li>
+                </ul>
+
+                <div id="top-search">
+                    <a class="search-click"><i class="fa fa-search"></i></a>
+                    <div class="show-search">
+                        <form role="search" method="get" id="searchform" action="http://cock.com.vn/">
+                            <div>
+                                <input type="text" class="search-input" placeholder="Type and hit enter..." name="s"
+                                       id="s"/>
+                            </div>
+                        </form>
+                        <a class="search-click close-search"><i class="fa fa-close"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </nav><!-- End Navigation -->
+    </header>
+    <!-- end #header -->
+
+    <div class="featured-area style-4 loaded loaded-wait">
+        <div class="penci-slider style-4 fixed-height" data-direction="horizontal" data-auto="true" data-autotime="4000" data-speed="600">
+            <div class="penci-viewport" style="overflow: hidden; position: relative;">
+                <ul class="slides" style="width: 1000%; transition-duration: 0s; transform: translate3d(-1170px, 0px, 0px);">
+                    <li class="pencislider-item clone" aria-hidden="true"
+                        style="width: 1170px; float: left; display: block;" th:each="baner : ${baners}" th:if="${baner.active == 1}">
+                        <a href="/"><img th:src="${baner.image}" alt="Slider item" draggable="false"/></a>
+                        <div class="pencislider-container penci-fadeInRight align-left" style="top: 163px;">
+                            <div class="pencislider-content">
+                                <h2 class="pencislider-title" style="color: #ffffff">Fury
+                                </h2>
+                                <p class="pencislider-caption" style="color: #ffffff">Collection</p>
+                                <!--<div class="penci-button">
+                                    <a class="pencislider-button" style="background: #ff3aad;color: #ffffff" href="#">read more</a>
+                                </div>-->
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pencislider-item penci-active-slide" style="width: 1170px; float: left; display: block;"
+                        th:each="baner : ${baners}" th:if="${baner.active == 2}">
+                        <a href="/"><img th:src="${baner.image}" alt="Slider item" draggable="false"/></a>
+                        <div class="pencislider-container penci-fadeInUp align-center" style="top: 163px;">
+                            <div class="pencislider-content">
+                                <h2 class="pencislider-title" style="color: #ffffff">Fury
+                                </h2>
+                                <p class="pencislider-caption" style="color: #ffffff">Collection</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pencislider-item" style="width: 1170px; float: left; display: block;"
+                        th:each="baner : ${baners}" th:if="${baner.active == 3}">
+                        <a href="/"><img th:src="${baner.image}" alt="Slider item" draggable="false"/></a>
+                        <div class="pencislider-container penci-fadeInUp align-center" style="top: 163px;">
+                            <div class="pencislider-content">
+                                <h2 class="pencislider-title" style="color: #ffffff">Fury
+                                </h2>
+                                <p class="pencislider-caption" style="color: #ffffff">Collection</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pencislider-item clone" aria-hidden="true"
+                        style="width: 1170px; float: left; display: block;" th:each="baner : ${baners}" th:if="${baner.active == 4}">
+                        <a href="/"><img th:src="${baner.image}" alt="Slider item" draggable="false"/></a>
+                        <div class="pencislider-container penci-fadeInRight align-left" style="top: 163px;">
+                            <div class="pencislider-content">
+                                <h2 class="pencislider-title" style="color: #ffffff">Fury
+                                </h2>
+                                <p class="pencislider-caption" style="color: #ffffff">Collection</p>
+                                <!--<div class="penci-button">
+                                    <a class="pencislider-button" style="background: #ff3aad;color: #ffffff" href="#">read more</a>
+                                </div>-->
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <ul class="penci-direction-nav">
+                <li class="penci-nav-prev"><a class="penci-prev" href="#"><i class="fa fa-angle-left"></i></a></li>
+                <li class="penci-nav-next"><a class="penci-next" href="#"><i class="fa fa-angle-right"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container home-featured-boxes">
+        <ul class="homepage-featured-boxes">
+            <li class="penci-featured-ct">
+                <a href="/products/men-wallet">
+                    <div class="penci-fea-in">
+                        <div class="fea-box-img"
+                             style="background-image: url(/images/a_slide/1.jpg);"></div>
+                        <h4><span class="boxes-text"><span>Wallet</span></span></h4>
+                    </div>
+                </a></li>
+            <li class="penci-featured-ct">
+                <a href="/products/passport-wallet">
+                    <div class="penci-fea-in">
+                        <div class="fea-box-img"
+                             style="background-image: url(/images/a_slide/2.jpg"></div>
+                        <h4><span class="boxes-text"><span>Passport</span></span></h4>
+                    </div>
+                </a></li>
+            <li class="penci-featured-ct">
+                <a href="https://www.facebook.com/Fury.com.vn/?fref=ts">
+                    <div class="penci-fea-in">
+                        <div class="fea-box-img"
+                             style="background-image: url(/images/a_slide/3.jpg);"></div>
+                        <h4><span class="boxes-text"><span>Facebook Page</span></span></h4>
+                    </div>
+                </a></li>
+        </ul>
+    </div>
+    <!-- Content -->
+    <div class="container container-single penci-enable-lightbox" style="transform: none;">
+        <div id="main" class="penci-main-sticky-sidebar"
+             style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
+            <div class="theiaStickySidebar" style="padding-top: 0px; padding-bottom: 1px; position: static;">
+                <article id="post-28135"
+                         class="post-28135 post type-post status-publish format-standard has-post-thumbnail hentry category-fashion category-shopping category-things-to-try category-trends">
+                    <div class="header-standard header-classic single-header">
+                        <h1 class="post-title single-post-title" th:text="${product.productName}"></h1>
+                        <div class="post-box-meta-single">
+                        </div>
+                    </div>
+                    <div class="post-image">
+                        <a th:href="${product.image}"
+                           data-rel="penci-gallery-image-content">
+                            <img width="800" height="533" th:src="${product.image}"
+                                class="attachment-penci-full-thumb size-penci-full-thumb wp-post-image"
+                                alt=""/></a></div>
+                    <div class="post-entry">
+                        <div class="inner-post-entry">
+                            <p><a th:href="${product.image}"
+                                  data-rel="penci-gallery-image-content"><img class="aligncenter size-full wp-image-28150"
+                                                                              th:src="${product.image}"
+                                                                               width="800" height="533"/></a>
+                            </p>
+                            <label th:text="${product.memo}" style="white-space: pre;"></label>
+                            <p th:each="p : ${relations}">
+                                <a th:href="${p.image}" data-rel="penci-gallery-image-content">
+                                    <img class="aligncenter size-full wp-image-28136"
+                                                                               th:src="${p.image}"
+                                                                               width="656" height="450"/></a></p>
+                            <p>&nbsp;</p>
+                        </div>
+                    </div>
+
+
+                    <div class="tags-share-box center-box">
+
+                    <span class="single-comment-o"><i class="fa fa-comment-o"></i><span class="dsq-postid"
+                                                                                        data-dsqidentifier="28135 http://lecitykitty.com/?p=28135">0 comment</span></span>
+
+                        <div class="post-share">
+                            <span class="count-number-like">0</span><a class="penci-post-like single-like-button"
+                                                                       data-post_id="28135" title="Like" data-like="Like"
+                                                                       data-unlike="Unlike"><i
+                                class="fa fa-heart-o"></i></a>
+                            <div class="list-posts-share">
+                                <a target="_blank"
+                                   href="https://www.facebook.com/Fury.com.vn/?fref=ts"><i
+                                        class="fa fa-facebook"></i><span class="dt-share">Facebook</span></a>
+                                <a target="_blank"
+                                   href="https://www.facebook.com/Fury.com.vn/?fref=ts"><i
+                                        class="fa fa-twitter"></i><span class="dt-share">Twitter</span></a>
+                                <a target="_blank"
+                                   href="https://www.facebook.com/Fury.com.vn/?fref=ts"><i
+                                        class="fa fa-google-plus"></i><span class="dt-share">Google +</span></a>
+                                <a data-pin-do="none" target="_blank"
+                                   href="https://www.facebook.com/Fury.com.vn/?fref=ts"><i
+                                        class="fa fa-pinterest"></i><span class="dt-share">Pinterest</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="post-pagination">
+                        <div class="prev-post">
+                            <a class="penci-post-nav-thumb"
+                               th:href="${ '/product/' + p.productId}">
+                                <img width="130" height="150"
+                                     th:src="${p.image}"
+                                     class="attachment-thumbnail size-thumbnail wp-post-image" alt=""/> </a>
+                            <div class="prev-post-inner">
+                                <div class="prev-post-title">
+                                    <span>previous post</span>
+                                </div>
+                                <a th:href="${ '/product/' + p.productId}">
+                                    <div class="pagi-text">
+                                        <h5 class="prev-title" th:text="${p.productName}"></h5>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="next-post">
+                            <a class="penci-post-nav-thumb nav-thumb-next"
+                               th:href="${ '/product/' + n.productId}">
+                                <img width="115" height="150"
+                                     th:src="${n.image}"
+                                     class="attachment-thumbnail size-thumbnail wp-post-image" alt=""
+                                     srcset=""
+                                     sizes="(max-width: 115px) 100vw, 115px"/> </a>
+                            <div class="next-post-inner">
+                                <div class="prev-post-title next-post-title">
+                                    <span>next post</span>
+                                </div>
+                                <a href="${ '/product/' + n.productId}">
+                                    <div class="pagi-text">
+                                        <h5 class="next-title" th:text="${n.productName}"></h5>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-related">
+                        <div class="post-title-box"><h4 class="post-box-title">Product Relation</h4></div>
+                        <div class="penci-carousel penci-related-carousel slick-initialized slick-slider loaded"
+                             data-auto="true" data-dots="true" data-arrows="false">
+                            <div aria-live="polite" class="slick-list draggable" tabindex="0">
+                                <div class="slick-track"
+                                     style="opacity: 1; width: 2700px; transform: translate3d(0px, 0px, 0px);">
+
+                                    <div class="item-related slick-slide slick-active"
+                                         aria-hidden="false" style="width: 250px;" th:each="r : ${relationsP}">
+                                        <a class="related-thumb penci-image-holder"
+                                           th:style="'background-image:url(' + ${r.image} + ');'"
+                                           th:href="${ '/product/' + r.productId}">
+                                        </a>
+                                        <h3><a th:href="${ '/product/' + r.productId}"><span th:text="${r.productName}"></span> </a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<ul class="slick-dots" style="display: block;">
+                                <li class="slick-active" aria-hidden="false">
+                                    <button type="button" data-role="none">1</button>
+                                </li>
+                                <li aria-hidden="true" class="">
+                                    <button type="button" data-role="none">2</button>
+                                </li>
+                                <li aria-hidden="true" class="">
+                                    <button type="button" data-role="none">3</button>
+                                </li>
+                            </ul>-->
+                        </div>
+                    </div>
+
+                    <div id="disqus_thread">
+                    </div>
+
+                    <script type="text/javascript">
+                        /*<![CDATA[*/
+                        //var disqus_url = 'http://lecitykitty.com/around-the-waist/';
+                        //var disqus_identifier = '28135 http://lecitykitty.com/?p=28135';
+                        //var disqus_container_id = 'disqus_thread';
+                        var disqus_shortname = 'fury';
+                        //var disqus_title = "Around the Waist";
+                        var disqus_config_custom = window.disqus_config;
+                        var disqus_config = function () {
+                            /*
+                             All currently supported events:
+                             onReady: fires when everything is ready,
+                             onNewComment: fires when a new comment is posted,
+                             onIdentify: fires when user is authenticated
+                             */
+
+
+                            this.language = '';
+                            this.callbacks.onReady.push(function () {
+
+                                // sync comments in the background so we don't block the page
+                                var script = document.createElement('script');
+                                script.async = true;
+                                script.src = '?cf_action=sync_comments&post_id=28135';
+
+                                var firstScript = document.getElementsByTagName('script')[0];
+                                firstScript.parentNode.insertBefore(script, firstScript);
+                            });
+
+                            if (disqus_config_custom) {
+                                disqus_config_custom.call(this);
+                            }
+                        };
+
+                        (function () {
+                            var dsq = document.createElement('script');
+                            dsq.type = 'text/javascript';
+                            dsq.async = true;
+                            /*dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';*/
+                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                        })();
+                        /*]]>*/
+                    </script>
+
+
+                </article>
+            </div>
+        </div>
+
+        <!-- END CONTAINER -->
+    </div>
+    <div class="clear-footer"></div>
+
+    <div id="penci-end-sidebar-sticky"></div>
+    <div id="widget-area">
+        <div class="container">
+            <div class="footer-widget-wrapper">
+                <aside id="mc4wp_form_widget-4" class="widget widget_mc4wp_form_widget">
+                    <script type="text/javascript">(function () {
+                        if (!window.mc4wp) {
+                            window.mc4wp = {
+                                listeners: [],
+                                forms: {
+                                    on: function (event, callback) {
+                                        window.mc4wp.listeners.push({
+                                            event: event,
+                                            callback: callback
+                                        });
+                                    }
+                                }
+                            }
+                        }
+                    })();
+                    </script><!-- MailChimp for WordPress v4.1.2 - https://wordpress.org/plugins/mailchimp-for-wp/ -->
+                    <form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-42097 mc4wp-form-basic" method="post"
+                          data-id="42097" data-name="Default sign-up form">
+                        <div class="mc4wp-form-fields">
+                            <div style="text-align:center;"><p>
+                                <label>Name:</label>
+                                <input type="text" name="NAME" required="true" placeholder="Your name"/>
+                            </p>
+                                <p>
+                                    <label for="mc4wp_email">Email address: </label>
+                                    <input type="email" id="mc4wp_email" name="EMAIL" placeholder="Your email address"
+                                           required="true"/>
+                                </p>
+
+                                <p>
+                                    <input type="button" value="Sign up"/>
+                                </p></div>
+                            <div style="display: none;"><input type="text" name="_mc4wp_honeypot" value="" tabindex="-1"
+                                                               autocomplete="off"/></div>
+                            <input type="hidden" name="_mc4wp_timestamp" value="1494376244"/><input type="hidden"
+                                                                                                    name="_mc4wp_form_id"
+                                                                                                    value="42097"/><input
+                                type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1"/></div>
+                        <div class="mc4wp-response"></div>
+                    </form><!-- / MailChimp for WordPress Plugin --></aside>
+                <aside id="penci_social_widget-2" class="widget penci_social_widget">
+                    <div class="widget-social">
+                        <a href="https://www.facebook.com/Fury.com.vn/?fref=ts" target="_blank"><i
+                                class="fa fa-facebook"></i><span>Facebook</span></a>
+                        <a href="https://www.facebook.com/Fury.com.vn/?fref=ts" target="_blank"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+                        <a href="https://www.facebook.com/Fury.com.vn/?fref=ts" target="_blank"><i class="fa fa-instagram"></i><span>Instagram</span></a>
+                        <a href="https://www.facebook.com/Fury.com.vn/?fref=ts" target="_blank"><i class="fa fa-pinterest"></i><span>Pinterest</span></a>
+                        <a href="mailto:thanhluan321988@gmail.com"><i class="fa fa-envelope-o"></i><span>Email</span></a>
+                        <a href="https://www.facebook.com/Fury.com.vn/?fref=ts" target="_blank"><i
+                                class="fa fa-snapchat-ghost"></i><span>Snapchat</span></a>
+                    </div>
+                </aside>
+            </div>
+            <div class="footer-widget-wrapper">
+                <aside id="penci_latest_news_widget-3" class="widget penci_latest_news_widget"><h4
+                        class="widget-title penci-border-arrow"><span class="inner-arrow">The Latest on Fury</span></h4>
+                    <ul class="side-newsfeed">
+                        <li class="penci-feed">
+                            <div class="side-item">
+
+                                <div class="side-image">
+                                    <a class="penci-image-holder small-fix-size" rel="bookmark"
+                                       style="background-image: url(/images/a_slide/1.jpg);"
+                                       href="/products/men-wallet"
+                                       title="Wallet">
+                                    </a>
+
+                                </div>
+                                <div class="side-item-text">
+                                    <h4><a href="/products/men-wallet" rel="bookmark"
+                                           title="Wallet">Wallet</a></h4>
+                                    <span class="side-item-meta">May 8, 2017</span>
+                                </div>
+                            </div>
+                        </li>
+
+
+                        <li class="penci-feed">
+                            <div class="side-item">
+
+                                <div class="side-image">
+                                    <a class="penci-image-holder small-fix-size" rel="bookmark"
+                                       style="background-image: url(/images/a_slide/2.jpg);"
+                                       href="/products/passport-wallet" title="Passport">
+                                    </a>
+
+                                </div>
+                                <div class="side-item-text">
+                                    <h4><a href="/products/passport-wallet" rel="bookmark"
+                                           title="Passport">Passport</a></h4>
+                                    <span class="side-item-meta">May 5, 2017</span>
+                                </div>
+                            </div>
+                        </li>
+
+
+                        <li class="penci-feed">
+                            <div class="side-item">
+
+                                <div class="side-image">
+                                    <a class="penci-image-holder small-fix-size" rel="bookmark"
+                                       style="background-image: url(/images/a_slide/fury.jpg);"
+                                       href="https://www.facebook.com/Fury.com.vn/?fref=ts"
+                                       title="Fury Facebook">
+                                    </a>
+
+                                </div>
+                                <div class="side-item-text">
+                                    <h4><a href="https://www.facebook.com/Fury.com.vn/?fref=ts" rel="bookmark"
+                                           title="Fury Facebook">Fury Facebook</a></h4>
+                                    <span class="side-item-meta">April 10, 2017</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+            <div class="footer-widget-wrapper last">
+                <aside id="penci_pinterest_widget-2" class="widget penci_pinterest_widget"><h4
+                        class="widget-title penci-border-arrow"><span class="inner-arrow">Here&#8217;s What I&#8217;m Pinning</span>
+                </h4>
+                    <div class="penci-pinterest-widget-container">
+                        <div class="penci-images-pin-widget">
+                            <a href="/">
+                                <span class="penci-image-holder rectangle-fix-size"
+                                      style="background-image: url(/images/ping/1.jpg);">
+                                </span>
+                            </a>
+                            <a href="/">
+                                <span class="penci-image-holder rectangle-fix-size"
+                                      style="background-image: url(/images/ping/2.jpg);">
+                                </span>
+                            </a>
+                            <a href="/">
+                                <span class="penci-image-holder rectangle-fix-size"
+                                      style="background-image: url(/images/ping/3.jpg);">
+                                </span>
+                            </a>
+                            <a href="/">
+                                <span class="penci-image-holder rectangle-fix-size"
+                                      style="background-image: url(/images/ping/4.jpg);">
+                                </span>
+                            </a>
+                            <a href="/">
+                                <span class="penci-image-holder rectangle-fix-size"
+                                      style="background-image: url(/images/ping/5.jpg);">
+                                </span>
+                            </a>
+                            <a href="/">
+                                <span class="penci-image-holder rectangle-fix-size"
+                                      style="background-image: url(/images/ping/6.jpg);">
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-instagram">
+        <aside id="jr_insta_slider-6" class="widget jr-insta-slider"><h4 class="footer-instagram-title"><span><span
+                class="title">@FURY</span></span></h4>
+            <div class='jr-insta-thumb'>
+                <ul class='no-bullet thumbnails no-border jr_col_6'>
+                    <li>
+                        <a href="https://www.facebook.com/Fury.com.vn/?fref=ts" target="_blank">
+                            <img src="/images/footer/1.jpg" style="width: 225px; height: 225px;"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/Fury.com.vn/?fref=ts" target="_blank">
+                            <img src="/images/footer/2.jpg" style="width: 225px; height: 225px;"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/Fury.com.vn/?fref=ts" target="_blank">
+                            <img src="/images/footer/3.jpg" style="width: 225px; height: 225px;"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/Fury.com.vn/?fref=ts" target="_blank">
+                            <img src="/images/footer/4.jpg" style="width: 225px; height: 225px;"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/Fury.com.vn/?fref=ts" target="_blank">
+                            <img src="/images/footer/5.jpg" style="width: 225px; height: 225px;"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/Fury.com.vn/?fref=ts" target="_blank">
+                            <img src="/images/footer/6.jpg" style="width: 225px; height: 225px;"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/Fury.com.vn/?fref=ts" target="_blank">
+                            <img src="/images/footer/7.jpg" style="width: 225px; height: 225px;"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/Fury.com.vn/?fref=ts" target="_blank">
+                            <img src="/images/footer/8.jpg" style="width: 225px; height: 225px;"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/Fury.com.vn/?fref=ts" target="_blank">
+                            <img src="/images/footer/9.jpg" style="width: 225px; height: 225px;"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/Fury.com.vn/?fref=ts" target="_blank">
+                            <img src="/images/footer/10.jpg" style="width: 225px; height: 225px;"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/Fury.com.vn/?fref=ts" target="_blank">
+                            <img src="/images/footer/11.jpg" style="width: 225px; height: 225px;"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/Fury.com.vn/?fref=ts" target="_blank">
+                            <img src="/images/footer/12.jpg" style="width: 225px; height: 225px;"/>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer id="footer-section">
+        <div class="container">
+            <div class="footer-logo-copyright footer-not-logo">
+
+                <div class="footer-menu-wrap">
+                    <ul id="menu-footer" class="footer-menu">
+                        <li id="menu-item-30377"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30377"><a
+                                href="/contact">CONTACT</a></li>
+                        <li id="menu-item-30896"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30896"><a
+                                href="#">COLLABS</a></li>
+                        <li id="menu-item-29604"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29604"><a
+                                href="#">PRESS</a></li>
+                        <li id="menu-item-42594"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42594"><a
+                                href="#">COPYRIGHT</a></li>
+                        <li id="menu-item-29603"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29603"><a
+                                href="#">DISCLOSURE</a></li>
+                    </ul>
+                </div>
+
+                <div id="footer-copyright">
+                    <p>All rights reserved. © 2017 FURY. Professional Inquiries and advertising please
+                        contact thanhluan321988@gmail.com</p>
+                </div>
+                <div class="go-to-top-parent"><a href="#" class="go-to-top"><span><i class="fa fa-angle-up"></i><br></br>Back To Top</span></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div><!-- End .wrapper-boxed -->
+
+<div id="fb-root"></div>
+
+<meta id="ba_s" property="options" content=""
+      data-o="{&quot;tid&quot;:&quot;UA-51158355-1&quot;,&quot;et&quot;:15,&quot;co&quot;:&quot;auto&quot;,&quot;g&quot;:1074203644,&quot;dl&quot;:&quot;\\.avi|\\.dmg|\\.doc|\\.exe|\\.gz|\\.mpg|\\.mp3|\\.pdf|\\.ppt|\\.psd|\\.rar|\\.wmv|\\.xls|\\.zip&quot;,&quot;s&quot;:22,&quot;a&quot;:16}"/>
+<script type="text/javascript">
+    /*<![CDATA[*/
+    (function () {
+        function addEventListener(element, event, handler) {
+            if (element.addEventListener) {
+                element.addEventListener(event, handler, false);
+            } else if (element.attachEvent) {
+                element.attachEvent('on' + event, handler);
+            }
+        }
+
+        function maybePrefixUrlField() {
+            if (this.value.trim() !== '' && this.value.indexOf('http') !== 0) {
+                this.value = "http://" + this.value;
+            }
+        }
+
+        var urlFields = document.querySelectorAll('.mc4wp-form input[type="url"]');
+        if (urlFields && urlFields.length > 0) {
+            for (var j = 0; j < urlFields.length; j++) {
+                addEventListener(urlFields[j], 'blur', maybePrefixUrlField);
+            }
+        }
+        /* test if browser supports date fields */
+        var testInput = document.createElement('input');
+        testInput.setAttribute('type', 'date');
+        if (testInput.type !== 'date') {
+
+            /* add placeholder & pattern to all date fields */
+            var dateFields = document.querySelectorAll('.mc4wp-form input[type="date"]');
+            for (var i = 0; i < dateFields.length; i++) {
+                if (!dateFields[i].placeholder) {
+                    dateFields[i].placeholder = 'YYYY-MM-DD';
+                }
+                if (!dateFields[i].pattern) {
+                    dateFields[i].pattern = '[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])';
+                }
+            }
+        }
+
+    })();
+    /*]]>*/
+</script>
+<script type='text/javascript' src='/js_n/jquery.ck.min.js'></script>
+<script type='text/javascript' src='/js_n/jquery.fancybox.min.js'></script>
+<script type='text/javascript' src='/js_n/jquery.placeholder.js'></script>
+<script type='text/javascript' src='/js_n/ninjapopups.min.js'></script>
+<script type='text/javascript' src='/js_n/jquery.form.min.js'></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var _wpcf7 = {"recaptcha": {"messages": {"empty": "Please verify that you are not a robot."}}, "cached": "1"};
+    /* ]]> */
+</script>
+<script type='text/javascript' src='/js_n/scripts.js'></script>
+<script type='text/javascript' src='/js_n/devicepx-jetpack.js'></script>
+<script type='text/javascript' src='/js_n/jquery.easypiechart.min.js'></script>
+<script type='text/javascript' src='/js_n/review.js'></script>
+<script type='text/javascript' src='/js_n/libs-script.min.js'></script>
+<script type='text/javascript' src='/js_n/retina.min.js'></script>
+<script type='text/javascript' src='/js_n/smoothscroll.js'></script>
+<script type='text/javascript' src='/js_n/main.js'></script>
+<!--<script type='text/javascript'>
+    /* <![CDATA[ */
+    var ajax_var = {"url": "http:\/\/lecitykitty.com\/wp-admin\/admin-ajax.php", "nonce": "445cdeebeb"};
+    /* ]]> */
+</script>-->
+<script type='text/javascript' src='/js_n/post-like.js'></script>
+<script type='text/javascript' src='/js_n/wp-gallery-custom-links.js'></script>
+<script type='text/javascript' src='/js_n/wp-embed.min.js'></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var mc4wp_forms_config = [];
+    /* ]]> */
+</script>
+<script type='text/javascript' src='/js_n/forms-api.min.js'></script>
+<!--[if lte IE 9]>
+<script type='text/javascript' src='/js_n/placeholders.min.js'></script>
+<![endif]-->
+<script type='text/javascript' src='/js_n/e-201719.js' async="true" defer="defer"></script>
+<script type='text/javascript'>
+    _stq = window._stq || [];
+    _stq.push(['view', {v: 'ext', j: '1:4.9', blog: '46881771', post: '0', tz: '-4', srv: 'lecitykitty.com'}]);
+    _stq.push(['clickTrackerInit', '46881771', '0']);
+</script>
+
+<script type='text/javascript'>
+    /*Google Tag Manager for Collective Bias*/
+
+    dataLayerCBias = [{
+        'trackingID': 'UA-77707781-17',
+        'javaScriptVersion': 'analytics.js',
+        'homePageURL': 'http://cock.com.vn'
+    }];
+</script>
+<noscript>
+    <iframe src='//www.googletagmanager.com/ns.html?id=GTM-PBN79J' height='0' width='0'
+            style='display:none;visibility:hidden'></iframe>
+</noscript>
+<script type='text/javascript'>
+    /*<![CDATA[*/
+    (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = '//www.googletagmanager.com/gtm.' + 'js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayerCBias', 'GTM-PBN79J');
+    /*]]>*/
+
+    /*End Google Tag Manager for Collective Bias*/
+</script>
+
+</body>
+</html>
+<script>
+    document.addEventListener('wpcf7mailsent', function (event) {
+        location = 'http://cock.com.vn/thank-you-for-subscribing/';
+    }, false);
+</script>

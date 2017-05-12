@@ -15,4 +15,5 @@ public interface ProductService {
     Iterable<Product> listWomenBeltProducts();
     void saveProduct(Product product);
     Iterable<Product> listAllProduct();
+
 }
